@@ -1,4 +1,4 @@
-Module f22ex1
+Module ex15
     Sub Main(args As String())
         Dim tipo As Byte
         Dim bool As Boolean
