@@ -1,0 +1,10 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>ficha21</RootNamespace>
+    <TargetFramework>net6.0</TargetFramework>
+    <StartupObject>ficha21.ex1</StartupObject>
+  </PropertyGroup>
+
+</Project>
