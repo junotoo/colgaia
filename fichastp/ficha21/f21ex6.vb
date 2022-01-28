@@ -7,7 +7,7 @@
 
 
         Dim code As Byte
-        Dim classi As String
+        Dim classe As String = 0
 
 
 
@@ -27,21 +27,21 @@
         'Escolha de classificações
         Select Case code
             Case 1
-                classi = "Alimento não-perecível"
+                classe = "Alimento não-perecível"
             Case 2, 3, 4
-                classi = "Alimento perecível"
+                classe = "Alimento perecível"
             Case 5, 6
-                classi = "Vestuário"
+                classe = "Vestuário"
             Case 7
-                classi = "Higiene Pessoal"
+                classe = "Higiene Pessoal"
             Case Is >= 8, Is <= 15
-                classi = "Limpeza e Utensílios Domésticos"
+                classe = "Limpeza e Utensílios Domésticos"
         End Select
 
 
 
         'Output
-        Console.WriteLine("O produto introduzido tem a seguinte classificação: {0}", classi)
+        Console.WriteLine("O produto introduzido tem a seguinte classificação: {0}", classe)
 
 
 
