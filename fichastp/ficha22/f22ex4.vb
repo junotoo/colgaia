@@ -3,7 +3,7 @@
         Dim num As Integer
         Dim c As Integer
         num = pedirInteger()
-        If num \ 2 = 1 Or num = 1 Or num = -1 Then
+        If num \ 2 = 1 Then
             num -= 1
         End If
         Do

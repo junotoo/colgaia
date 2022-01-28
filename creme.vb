@@ -1,7 +1,7 @@
 ﻿Module creme
     Function pedirString(Optional msg As String = "Introduza o seu nome: ")
         Dim a As String
-        Console.WriteLine(msg)
+        Console.Write(msg)
         a = Console.ReadLine()
         Console.Clear()
         Return a
@@ -11,7 +11,7 @@
         Dim num As Integer
         Dim flag As Boolean
         Do
-            Console.WriteLine(msg)
+            Console.Write(msg)
             num = Console.ReadLine
             If num > max Or num < min Then
                 flag = False
@@ -25,10 +25,16 @@
         Loop Until flag = True
         Return num
     End Function
-    Function media(numelementos As Byte, val1 As Double, val2 As Double, Optional val3 As Double = Nothing, Optional val4 As Double = Nothing)
-        Dim med As Double
-        med = ((val1 + val2 + val3 + val4) / numelementos)
-        Return med
+    Function mediaAlt(numelementos As Integer)
+        Dim soma As Double = 0
+        Dim c As Integer = 0
+        Do
+            Console.Write("Introduza o {0}º número inteiro: ", c + 1)
+            soma += Console.ReadLine
+            c += 1
+        Loop Until numelementos = c
+        Console.Clear()
+        Return soma / numelementos
     End Function
     Sub espera()
         Console.WriteLine("Pressione qualquer tecla para continuar...")
