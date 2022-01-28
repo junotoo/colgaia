@@ -4,7 +4,7 @@
     <OutputType>Exe</OutputType>
     <RootNamespace>ficha21</RootNamespace>
     <TargetFramework>net6.0</TargetFramework>
-    <StartupObject>ficha21.f22ex2</StartupObject>
+    <StartupObject>ficha21.f22ex4</StartupObject>
   </PropertyGroup>
 
 </Project>

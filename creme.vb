@@ -7,7 +7,7 @@
         Return a
     End Function
 
-    Function pedirInteger(Optional msg As String = "Introduza um numero inteiro: ", Optional max As Integer = Nothing, Optional min As Integer = Nothing)
+    Function pedirInteger(Optional msg As String = "Introduza um numero inteiro: ", Optional max As Integer = 32767, Optional min As Integer = -32767)
         Dim num As Integer
         Dim flag As Boolean
         Do
@@ -22,7 +22,7 @@
             Else
                 flag = True
             End If
-        Loop Until flag = False
+        Loop Until flag = True
         Return num
     End Function
     Function media(numelementos As Byte, val1 As Double, val2 As Double, Optional val3 As Double = Nothing, Optional val4 As Double = Nothing)

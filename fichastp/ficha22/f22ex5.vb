@@ -1,4 +1,4 @@
-﻿Module f22ex5
+﻿Module base
     Sub Main(args As String())
 
     End Sub
