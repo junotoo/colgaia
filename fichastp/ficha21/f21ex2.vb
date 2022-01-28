@@ -1,4 +1,4 @@
-﻿Module ex2
+﻿Module f21ex2
     Sub Main(args As String())
         Dim vogal As Char
         Dim bool As Boolean

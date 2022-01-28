@@ -1,4 +1,4 @@
-﻿Module ex5
+﻿Module f21ex5
     Sub Main(args As String())
 
         Dim idade, valor_final As Byte

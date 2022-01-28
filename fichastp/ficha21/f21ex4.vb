@@ -1,4 +1,4 @@
-﻿Module ex4
+﻿Module f21ex4
     Sub Main(args As String())
 
         Dim mes As Byte
