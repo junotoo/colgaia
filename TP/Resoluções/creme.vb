@@ -68,5 +68,20 @@ Pressione qualquer tecla para continuar...")
         Loop Until flag = True
         Return num
     End Function
+    Function numsPares(num As Integer)
+        Dim par As Integer
+        If num \ 2 = 0 Then
+            par += 1
+        End If
+        Return par
+    End Function
+    Sub maiorMenor(num As Integer, Optional ByRef maior As Integer = -32767, Optional ByRef menor As Integer = 32767)
+        If num > maior Then
+            maior = num
+        End If
+        If num < menor Then
+            menor = num
+        End If
+    End Sub
 End Module
 

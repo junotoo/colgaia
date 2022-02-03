@@ -2,9 +2,9 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <RootNamespace>ficha21</RootNamespace>
+    <RootNamespace>fichas</RootNamespace>
     <TargetFramework>net6.0</TargetFramework>
-    <StartupObject>ficha21.f22ex6</StartupObject>
+    <StartupObject>fichas.f22ex8</StartupObject>
   </PropertyGroup>
 
 </Project>
