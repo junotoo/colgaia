@@ -7,8 +7,4 @@
     <StartupObject>fichas.f23ex1</StartupObject>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Folder Include="TP\NovaPasta\" />
-  </ItemGroup>
-
 </Project>
