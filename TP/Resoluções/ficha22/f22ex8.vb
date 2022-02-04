@@ -1,7 +1,7 @@
 ﻿Module f22ex8
     Sub Main(args As String())
         Dim num As Integer
-        Dim c As Integer = 0
+        Dim c As Byte = 0
         Do
             num = pedirInteger()
             c += 1

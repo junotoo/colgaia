@@ -1,7 +1,7 @@
 ﻿Module f22ex6
     Sub Main(args As String())
         Dim nota As Decimal
-        Dim c As Integer = 0
+        Dim c As Byte = 0
         Do
             c += 1
             nota = pedirDouble("Introduza a nota do teste teórico: ", 20, 0)

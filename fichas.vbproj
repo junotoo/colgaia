@@ -4,13 +4,6 @@
     <OutputType>Exe</OutputType>
     <RootNamespace>fichas</RootNamespace>
     <TargetFramework>net6.0</TargetFramework>
-    <StartupObject>fichas.f22ex11</StartupObject>
+    <StartupObject>fichas.f23ex2</StartupObject>
   </PropertyGroup>
-
-  <ItemGroup>
-    <Compile Remove="TP\NovaPasta\**" />
-    <EmbeddedResource Remove="TP\NovaPasta\**" />
-    <None Remove="TP\NovaPasta\**" />
-  </ItemGroup>
-
 </Project>

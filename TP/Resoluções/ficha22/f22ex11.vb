@@ -2,7 +2,7 @@
     Sub Main(args As String())
 
         Dim num As Integer
-        Dim i As Integer
+        Dim i As Byte
         Dim max As Integer
         Dim min As Integer
 
@@ -19,7 +19,7 @@
                 min = num
             End If
             Console.Clear()
-        Loop Until i = 3
+        Loop Until i = 30
         Console.WriteLine("O maior lido foi {0} e o menor valor lido foi {1}.", max, min)
         esperaAlt()
     End Sub

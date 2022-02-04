@@ -1,11 +1,11 @@
 ﻿Module f22ex10
     Sub Main(args As String())
         Dim num As Integer = 0
-        Dim c As Integer = 0
-        Dim soma As Integer = 0
-        Dim m10 As Integer = 0
-        Dim m20 As Integer = 0
-        Dim m100 As Integer = 0
+        Dim c As Byte = 0
+        Dim soma As Byte = 0
+        Dim m10 As Byte = 0
+        Dim m20 As Byte = 0
+        Dim m100 As Byte = 0
         Do
             c += 1
             num = pedirInteger()

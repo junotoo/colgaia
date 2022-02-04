@@ -1,6 +1,6 @@
 ﻿Module f22ex2
     Sub Main()
-        Dim c As Integer = 0
+        Dim c As Byte = 0
         Do
             Console.WriteLine(c)
             c += 1

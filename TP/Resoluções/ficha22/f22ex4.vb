@@ -1,7 +1,7 @@
 ﻿Module f22ex4
     Sub Main(args As String())
         Dim num As Integer
-        Dim c As Integer
+        Dim c As Byte = 0
         num = pedirInteger()
         If num \ 2 = 1 Then
             num -= 1
