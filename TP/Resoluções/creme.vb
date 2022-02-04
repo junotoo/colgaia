@@ -13,6 +13,7 @@
         Do
             Console.Write(msg)
             num = Console.ReadLine
+            Console.Clear()
             If num > max Or num < min Then
                 flag = False
                 Console.WriteLine("O número introduzido é inválido!")
@@ -58,10 +59,7 @@ Pressione qualquer tecla para continuar...")
             If num > max Or num < min Then
                 flag = False
                 Console.WriteLine("O número introduzido é inválido!")
-                Console.WriteLine("
-Pressione qualquer tecla para continuar...")
-                Console.ReadKey()
-                Console.Clear()
+                esperaAlt()
             Else
                 flag = True
             End If

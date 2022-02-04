@@ -7,7 +7,6 @@
         Do
             c += 1
             num = pedirInteger()
-            Console.Clear()
             maiorMenor(num, maior, menor)
         Loop Until c = 30
         Console.WriteLine("Dos {0} números lidos, o maior foi {1} e o menor foi {2}", c, maior, menor)
