@@ -14,11 +14,11 @@
             i = i + 1
             If num > max Then
                 max = num
-            ElseIf num < min Then
+            End If
+            If num < min Then
                 min = num
             End If
             Console.Clear()
-
         Loop Until i = 3
 
         Console.WriteLine("O maior lido foi {0} e o menor valor lido foi {1}.", max, min)
