@@ -7,4 +7,10 @@
     <StartupObject>fichas.f22ex11</StartupObject>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="TP\NovaPasta\**" />
+    <EmbeddedResource Remove="TP\NovaPasta\**" />
+    <None Remove="TP\NovaPasta\**" />
+  </ItemGroup>
+
 </Project>

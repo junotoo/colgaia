@@ -5,6 +5,6 @@
             num += pedirInteger()
             Console.Clear()
         Loop Until num >= 5000
-        Console.WriteLine("o valor so somatório foi {0}", num)
+        Console.WriteLine("O valor do somatório foi {0}", num)
     End Sub
 End Module
