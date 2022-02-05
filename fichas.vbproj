@@ -4,6 +4,6 @@
     <OutputType>Exe</OutputType>
     <RootNamespace>fichas</RootNamespace>
     <TargetFramework>net6.0</TargetFramework>
-    <StartupObject>fichas.f24ex3</StartupObject>
+    <StartupObject>fichas.f23ex5</StartupObject>
   </PropertyGroup>
 </Project>

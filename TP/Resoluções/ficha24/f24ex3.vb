@@ -1,5 +1,5 @@
 ﻿Module f24ex3
-    Sub Main()
+    Sub Main(args As String())
         Dim idade As Integer
         Dim c As Byte
         Dim m18 As Byte = 0

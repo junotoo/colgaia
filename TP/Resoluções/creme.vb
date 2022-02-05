@@ -79,5 +79,17 @@ Pressione qualquer tecla para continuar...")
             menor = num
         End If
     End Sub
+    Function pedirChar(Optional msg As String = "Introduza um carater: ")
+        Dim a As Char
+        Console.Write(msg)
+        a = Console.ReadLine()
+        Console.Clear()
+        Return a
+    End Function
+    Sub writeAlt(msg As String)
+        Console.WriteLine(msg)
+        esperaAlt()
+    End Sub
 End Module
+
 
