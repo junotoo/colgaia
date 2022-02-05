@@ -9,6 +9,5 @@
             desvio -= num
         End While
         Console.WriteLine("O desvio é {0}.", desvio)
-
     End Sub
 End Module

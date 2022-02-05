@@ -1,20 +1,7 @@
 ﻿Module f21ex3
-
-
-
     Sub Main(args As String())
-
-
-
         Dim moeda(14), tipo_de_moeda(14), val As Double
-
-
-
         Console.OutputEncoding = System.Text.Encoding.UTF8
-
-
-
-        'Input
         Do
             Console.Write("Introduza o valor monetário que deseja converter: ")
             val = Console.ReadLine
@@ -25,13 +12,7 @@
             End If
             Console.Clear()
         Loop While val <= 0
-
-
-
         val *= 100
-
-
-
         Do
             Select Case val
                 Case >= 50000
@@ -96,10 +77,6 @@
                     tipo_de_moeda(0) = 0.01
             End Select
         Loop While val <> 0
-
-
-
-
         Console.Write("São necessárias ")
         For i = 14 To 0 Step -1
             If tipo_de_moeda(i) <> 0 Then
@@ -110,16 +87,7 @@
                 End If
             End If
         Next
-
-
-
         Console.WriteLine("Prima qualquer tecla para continuar...")
         Console.ReadKey()
-
-
-
     End Sub
-
-
-
 End Module

@@ -6,7 +6,7 @@
             c += 1
             num = pedirInteger()
             Console.Clear()
-            pares += numsPares(num)
+            pares += numPar(num)
         Loop Until c = 30
         impares = 30 - pares
         Console.WriteLine("Dos {0} números lidos, {1} eram pares e {2} eram ímpares.", c, pares, impares)

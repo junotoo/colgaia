@@ -7,7 +7,7 @@
         Return a
     End Function
 
-    Function pedirInteger(Optional msg As String = "Introduza um numero inteiro: ", Optional max As Integer = 32767, Optional min As Integer = -32767)
+    Function pedirInteger(Optional msg As String = "Introduza um numero inteiro: ", Optional max As Integer = 32767, Optional min As Integer = -32767, Optional msgErro As String = "O número introduzido é inválido!")
         Dim num As Integer
         Dim flag As Boolean
         Do
@@ -16,10 +16,8 @@
             Console.Clear()
             If num > max Or num < min Then
                 flag = False
-                Console.WriteLine("O número introduzido é inválido!")
-                Console.WriteLine("Pressione qualquer tecla para continuar...")
-                Console.ReadKey()
-                Console.Clear()
+                Console.WriteLine(msgErro)
+                esperaAlt()
             Else
                 flag = True
             End If
@@ -66,7 +64,7 @@ Pressione qualquer tecla para continuar...")
         Loop Until flag = True
         Return num
     End Function
-    Function numsPares(num As Integer)
+    Function numPar(num As Integer)
         Dim par As Integer
         If num \ 2 = 0 Then
             par += 1
