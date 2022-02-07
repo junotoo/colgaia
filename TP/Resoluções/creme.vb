@@ -7,21 +7,17 @@
         Return a
     End Function
 
-    Function pedirInteger(Optional msg As String = "Introduza um numero inteiro: ", Optional max As Integer = 32767, Optional min As Integer = -32767, Optional msgErro As String = "O número introduzido é inválido!")
-        Dim num As Integer
-        Dim flag As Boolean
-        Do
+    Function pedirInteger(Optional msg As String = "Introduza um numero inteiro: ", Optional max As Integer = 32767, Optional min As Integer = -32767, Optional msgErro As String = "O valor introduzido é inválido!")
+        Dim num As Integer = min
+        While num > min And num < max
             Console.Write(msg)
             num = Console.ReadLine
             Console.Clear()
             If num > max Or num < min Then
-                flag = False
                 Console.WriteLine(msgErro)
                 esperaAlt()
-            Else
-                flag = True
             End If
-        Loop Until flag = True
+        End While
         Return num
     End Function
     Function mediaAlt(numelementos As Integer, Optional msg As String = "Introduza o {0}º número inteiro: ")
@@ -48,20 +44,16 @@ Pressione qualquer tecla para continuar...")
         Console.ReadKey()
         Console.Clear()
     End Sub
-    Function pedirDouble(Optional msg As String = "Introduza um numero inteiro: ", Optional max As Double = 1.7976931348623157E+308, Optional min As Double = -1.7976931348623157E+308)
-        Dim num As Integer
-        Dim flag As Boolean
-        Do
+    Function pedirDouble(Optional msg As String = "Introduza um valor: ", Optional max As Double = 1.7976931348623157E+308, Optional min As Double = -1.7976931348623157E+308, Optional msgErro As String = "O valor introduzido é inválido!")
+        Dim num As Double = min
+        While num > min And num < max
             Console.Write(msg)
             num = Console.ReadLine
             If num > max Or num < min Then
-                flag = False
-                Console.WriteLine("O número introduzido é inválido!")
+                Console.WriteLine(msgErro)
                 esperaAlt()
-            Else
-                flag = True
             End If
-        Loop Until flag = True
+        End While
         Return num
     End Function
     Function numPar(num As Integer)
@@ -89,6 +81,26 @@ Pressione qualquer tecla para continuar...")
     Sub writeAlt(msg As String)
         Console.WriteLine(msg)
         esperaAlt()
+    End Sub
+    Sub ARpedirInteger(ByRef array() As Integer, Optional posicoes As Integer = 999999999, Optional paragem As Integer = vbNull, Optional msg As Boolean = True, Optional max As Integer = 32767, Optional min As Integer = -32767, Optional msgErro As String = "O valor introduzido é inválido!")
+        Dim c As Integer = 0
+        Dim skip As Boolean = False
+        While (c < posicoes Or skip = False) And (array(c) > min Or array(c) < max)
+            If msg = True Then
+                Console.Write("Introduza o valor para a {0}ª posição do vetor: ", c + 1)
+            End If
+            array(c) = Console.ReadLine
+            Console.Clear()
+            If array(c) = paragem Then
+                skip = True
+            End If
+            If array(c) < min Or array(c) > max Then
+                Console.WriteLine(msgErro)
+                esperaAlt()
+            Else
+                c += 1
+            End If
+        End While
     End Sub
 End Module
 

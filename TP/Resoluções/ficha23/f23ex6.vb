@@ -15,7 +15,6 @@
                 Case ":", ".", ",", ";", "!", "?"
                     pont += 1
                 Case " "
-
                 Case Else
                     outros += 1
             End Select
