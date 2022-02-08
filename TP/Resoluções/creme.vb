@@ -85,7 +85,7 @@ Pressione qualquer tecla para continuar...")
     Sub ARpedirInteger(ByRef array() As Integer, Optional posicoes As Integer = 999999999, Optional paragem As Integer = vbNull, Optional msg As Boolean = True, Optional max As Integer = 32767, Optional min As Integer = -32767, Optional msgErro As String = "O valor introduzido é inválido!")
         Dim c As Integer = 0
         Dim skip As Boolean = False
-        While (c < posicoes Or skip = False) And (array(c) > min Or array(c) < max)
+        While c < posicoes And skip = False And (array(c) > min Or array(c) < max)
             If msg = True Then
                 Console.Write("Introduza o valor para a {0}ª posição do vetor: ", c + 1)
             End If
@@ -97,6 +97,58 @@ Pressione qualquer tecla para continuar...")
             If array(c) < min Or array(c) > max Then
                 Console.WriteLine(msgErro)
                 esperaAlt()
+            Else
+                c += 1
+            End If
+        End While
+    End Sub
+    Sub ARpedirDouble(ByRef array() As Double, Optional posicoes As Integer = vbNull, Optional paragem As Double = vbNull, Optional msg As Boolean = True, Optional max As Integer = 32767, Optional min As Integer = -32767, Optional msgErro As String = "O valor introduzido é inválido!")
+        Dim c As Integer = 0
+        Dim skip As Boolean = False
+        While c < posicoes And skip = False And (array(c) > min Or array(c) < max)
+            If msg = True Then
+                Console.Write("Introduza o valor para a {0}ª posição do vetor: ", c + 1)
+            End If
+            array(c) = Console.ReadLine
+            Console.Clear()
+            If array(c) = paragem Then
+                skip = True
+            End If
+            If array(c) < min Or array(c) > max Then
+                Console.WriteLine(msgErro)
+                esperaAlt()
+            Else
+                c += 1
+            End If
+        End While
+    End Sub
+    Sub ARpedirChar(ByRef array() As Char, Optional posicoes As Integer = vbNull, Optional paragem As Char = "", Optional msg As Boolean = True)
+        Dim c As Integer = 0
+        Dim skip As Boolean = False
+        While c < posicoes And skip = False
+            If msg = True Then
+                Console.Write("Introduza o valor para a {0}ª posição do vetor: ", c + 1)
+            End If
+            array(c) = Console.ReadLine
+            Console.Clear()
+            If array(c) = paragem Then
+                skip = True
+            Else
+                c += 1
+            End If
+        End While
+    End Sub
+    Sub ARpedirString(ByRef array() As String, Optional posicoes As Integer = vbNull, Optional paragem As String = "", Optional msg As Boolean = True)
+        Dim c As Integer = 0
+        Dim skip As Boolean = False
+        While c < posicoes And skip = False
+            If msg = True Then
+                Console.Write("Introduza o valor para a {0}ª posição do vetor: ", c + 1)
+            End If
+            array(c) = Console.ReadLine
+            Console.Clear()
+            If array(c) = paragem Then
+                skip = True
             Else
                 c += 1
             End If
