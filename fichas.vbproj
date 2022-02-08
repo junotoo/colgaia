@@ -1,9 +1,9 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <RootNamespace>fichas</RootNamespace>
     <TargetFramework>net6.0</TargetFramework>
-    <StartupObject>fichas.f25ex1</StartupObject>
+    <StartupObject>fichas.f25ex4</StartupObject>
   </PropertyGroup>
 </Project>
