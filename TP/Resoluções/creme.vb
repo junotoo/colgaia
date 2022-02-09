@@ -105,6 +105,8 @@ Pressione qualquer tecla para continuar...")
                 Else
                     c += 1
                 End If
+            Else
+                c += 1
             End If
         End While
     End Sub
@@ -125,20 +127,22 @@ Pressione qualquer tecla para continuar...")
                 If array(c) = paragem Then
                     skip = True
                 End If
-            End If
-            If array(c) < min Or array(c) > max Then
+                If array(c) < min Or array(c) > max Then
                     Console.WriteLine(msgErro)
                     esperaAlt()
                 Else
                     c += 1
                 End If
+            Else
+                c += 1
+            End If
         End While
     End Sub
     Sub ARpedirChar(ByRef array() As Char, posicoes As Integer, Optional paragemToggle As Boolean = False, Optional paragem As Char = vbNullChar, Optional msg As Boolean = True, Optional msg1 As String = vbNullString, Optional msg2 As String = vbNullString)
         Dim c As Integer = 0
         Dim skip As Boolean = False
         While c < posicoes And skip = False
-            If msg = True Then
+            If msg Then
                 Console.Write("Introduza o valor para a {0}ª posição do vetor: ", c + 1)
             Else
                 Console.Write(msg1)
@@ -153,6 +157,8 @@ Pressione qualquer tecla para continuar...")
                 Else
                     c += 1
                 End If
+            Else
+                c += 1
             End If
         End While
     End Sub
@@ -175,8 +181,364 @@ Pressione qualquer tecla para continuar...")
                 Else
                     c += 1
                 End If
+            Else
+                c += 1
             End If
         End While
+    End Sub
+    Sub ARmostrarChar(array() As Char, posicoes As Integer)
+        Dim c As Byte
+        For c = 0 To posicoes - 1
+            Console.Write(array(c))
+            Console.Write(" ")
+        Next
+    End Sub
+    Sub ARmostrarCharAlt(array() As Char, posicoes As Integer)
+        Dim c As Byte
+        For c = 0 To posicoes - 1
+            Console.Write(array(c))
+        Next
+    End Sub
+    Sub ARmostrarInteger(array() As Integer, posicoes As Integer)
+        Dim c As Byte
+        For c = 0 To posicoes - 1
+            Console.Write(array(c))
+            Console.Write(" ")
+        Next
+    End Sub
+
+    Function menu(nopts As Byte, opt1 As String, opt2 As String, opt3 As String, Optional opt4 As String = vbNullString, Optional opt5 As String = vbNullString, Optional opt6 As String = vbNullString, Optional opt7 As String = vbNullString)
+        '
+        'alterar com length e + cenas
+        '
+        '
+        Dim optquit As String = "Terminar programa"
+        Dim x As Byte
+        'Console.WriteLine("##########################################")
+        Select Case nopts
+            Case 3
+                Console.WriteLine("#  1  {0}", opt1) 'numeração automatica aqui
+                Console.WriteLine("#  2  {0}", opt2)
+                Console.WriteLine("#  3  {0}", opt3)
+                Console.WriteLine("#  0  {0}", optquit)
+            Case 4
+                Console.WriteLine("#  1  {0}", opt1) 'numeração automatica aqui
+                Console.WriteLine("#  2  {0}", opt2)
+                Console.WriteLine("#  3  {0}", opt3)
+                Console.WriteLine("#  4  {0}", opt4)
+                Console.WriteLine("#  0  {0}", optquit)
+            Case 5
+                Console.WriteLine("#  1  {0}", opt1) 'numeração automatica aqui
+                Console.WriteLine("#  2  {0}", opt2)
+                Console.WriteLine("#  3  {0}", opt3)
+                Console.WriteLine("#  4  {0}", opt4)
+                Console.WriteLine("#  5  {0}", opt5)
+                Console.WriteLine("#  0  {0}", optquit)
+            Case 6
+                Console.WriteLine("#  1  {0}", opt1) 'numeração automatica aqui
+                Console.WriteLine("#  2  {0}", opt2)
+                Console.WriteLine("#  3  {0}", opt3)
+                Console.WriteLine("#  4  {0}", opt4)
+                Console.WriteLine("#  5  {0}", opt5)
+                Console.WriteLine("#  6  {0}", opt6)
+                Console.WriteLine("#  0  {0}", optquit)
+            Case 7
+                Console.WriteLine("#  1  {0}", opt1) 'numeração automatica aqui
+                Console.WriteLine("#  2  {0}", opt2)
+                Console.WriteLine("#  3  {0}", opt3)
+                Console.WriteLine("#  4  {0}", opt4)
+                Console.WriteLine("#  5  {0}", opt5)
+                Console.WriteLine("#  6  {0}", opt6)
+                Console.WriteLine("#  7  {0}", opt7)
+                Console.WriteLine("#  0  {0}", optquit)
+            Case Else
+                Console.WriteLine("DEBUG
+#######################
+Parâmetro de nº de opções errados, tem q ser no minimo 3 e no maximo 7")
+        End Select
+        Console.Write("Opção a selecionar: ")
+        x = Console.ReadLine()
+        Return X
+    End Function
+    Function ARmediaInteger(array() As Integer, posicoes As Integer)
+        Dim c As Integer
+        Dim media As Double
+        For c = 0 To posicoes - 1
+            media += array(c)
+        Next
+        media /= posicoes
+        Return media
+    End Function
+    Function ARmediaDouble(array() As Double, posicoes As Integer)
+        Dim c As Integer
+        Dim media As Double
+        For c = 0 To posicoes - 1
+            media += array(c)
+        Next
+        media /= posicoes
+        Return media
+    End Function
+    Sub AR2pedirInteger(ByRef array(,) As Integer, posicoes1 As Integer, posicoes2 As Integer, Optional paragemToggle As Boolean = False, Optional paragem As Integer = -1, Optional msg As Boolean = True, Optional msg1 As String = vbNullString, Optional msg2 As String = vbNullString, Optional msg3 As String = vbNullString, Optional max As Integer = 32767, Optional min As Integer = -32767, Optional msgErro As String = "O valor introduzido é inválido!")
+        Dim c, c2 As Integer
+        Dim skip As Boolean = False
+        For c2 = 0 To posicoes2 - 1
+            c = 0
+            While c < posicoes1 And skip = False And (array(c, c2) > min Or array(c, c2) < max)
+                If msg = True Then
+                    Console.Write("Introduza o valor para a {0}ª posição da {1}ª linha: ", c + 1, c2 + 1)
+                Else
+                    Console.Write(msg1)
+                    Console.Write(c + 1)
+                    Console.Write(msg2)
+                    Console.Write(c2 + 1)
+                    Console.Write(msg3)
+                End If
+                array(c, c2) = Console.ReadLine()
+                Console.Clear()
+                If paragemToggle = True Then
+                    If array(c, c2) = paragem Then
+                        skip = True
+                    End If
+                    If array(c, c2) < min Or array(c, c2) > max Then
+                        Console.WriteLine(msgErro)
+                        esperaAlt()
+                    Else
+                        c += 1
+                    End If
+                Else
+                    c += 1
+                End If
+            End While
+        Next
+    End Sub
+    Sub AR2pedirDouble(ByRef array(,) As Double, posicoes1 As Integer, posicoes2 As Integer, Optional paragemToggle As Boolean = False, Optional paragem As Integer = -1, Optional msg As Boolean = True, Optional msg1 As String = vbNullString, Optional msg2 As String = vbNullString, Optional msg3 As String = vbNullString, Optional max As Integer = 32767, Optional min As Integer = -32767, Optional msgErro As String = "O valor introduzido é inválido!")
+        Dim c, c2 As Integer
+        Dim skip As Boolean = False
+        For c2 = 0 To posicoes2 - 1
+            c = 0
+            While c < posicoes1 And skip = False And (array(c, c2) > min Or array(c, c2) < max)
+                If msg = True Then
+                    Console.Write("Introduza o valor para a {0}ª posição da {1}ª linha: ", c + 1, c2 + 1)
+                Else
+                    Console.Write(msg1)
+                    Console.Write(c + 1)
+                    Console.Write(msg2)
+                    Console.Write(c2 + 1)
+                    Console.Write(msg3)
+                End If
+                array(c, c2) = Console.ReadLine()
+                Console.Clear()
+                If paragemToggle = True Then
+                    If array(c, c2) = paragem Then
+                        skip = True
+                    End If
+                    If array(c, c2) < min Or array(c, c2) > max Then
+                        Console.WriteLine(msgErro)
+                        esperaAlt()
+                    Else
+                        c += 1
+                    End If
+                Else
+                    c += 1
+                End If
+            End While
+        Next
+    End Sub
+    Sub AR2pedirChar(ByRef array(,) As Char, posicoes1 As Integer, posicoes2 As Integer, Optional paragemToggle As Boolean = False, Optional paragem As Char = vbNullChar, Optional msg As Boolean = True, Optional msg1 As String = vbNullString, Optional msg2 As String = vbNullString, Optional msg3 As String = vbNullString)
+        Dim c, c2 As Integer
+        Dim skip As Boolean = False
+        For c2 = 0 To posicoes2 - 1
+            c = 0
+            While c < posicoes1 And skip = False
+                If msg Then
+                    Console.Write("Introduza o valor para a {0}ª posição da {1}ª linha: ", c + 1, c2 + 1)
+                Else
+                    Console.Write(msg1)
+                    Console.Write(c + 1)
+                    Console.Write(msg2)
+                    Console.Write(c2 + 1)
+                    Console.Write(msg3)
+                End If
+                array(c, c2) = Console.ReadLine()
+                Console.Clear()
+                If paragemToggle = True Then
+                    If array(c, c2) = paragem Then
+                        skip = True
+                    Else
+                        c += 1
+                    End If
+                Else
+                    c += 1
+                End If
+            End While
+        Next
+    End Sub
+    Sub AR2pedirString(ByRef array(,) As String, posicoes1 As Integer, posicoes2 As Integer, Optional paragemToggle As Boolean = False, Optional paragem As String = vbNullString, Optional msg As Boolean = True, Optional msg1 As String = vbNullString, Optional msg2 As String = vbNullString, Optional msg3 As String = vbNullString)
+        Dim c, c2 As Integer
+        Dim skip As Boolean = False
+        For c2 = 0 To posicoes2 - 1
+            c = 0
+            While c < posicoes1 And skip = False
+                If msg = True Then
+                    Console.Write("Introduza o valor para a {0}ª posição da {1}ª linha: ", c + 1, c2 + 1)
+                Else
+                    Console.Write(msg1)
+                    Console.Write(c + 1)
+                    Console.Write(msg2)
+                    Console.Write(c2 + 1)
+                    Console.Write(msg3)
+                End If
+                array(c, c2) = Console.ReadLine()
+                Console.Clear()
+                If paragemToggle = True Then
+                    If array(c, c2) = paragem Then
+                        skip = True
+                    Else
+                        c += 1
+                    End If
+                Else
+                    c += 1
+                End If
+            End While
+        Next
+    End Sub
+    Sub AR2mostrarChar(array(,) As Char, posicoes1 As Integer, posicoes2 As Integer, Optional linha As Integer = -1, Optional coluna As Integer = -1)
+        Dim c, c2 As Byte
+        If linha And coluna <> -1 And linha <> -1 Then
+            For c2 = 0 To posicoes2 - 1
+                For c = 0 To posicoes1 - 1
+                    Console.Write(array(c, c2))
+                    Console.Write(" ")
+                Next
+            Next
+        ElseIf linha <> -1 Then
+            For c = 0 To posicoes2 - 1
+                Console.Write(array(linha - 1, c))
+                Console.Write(" ")
+            Next
+        ElseIf coluna <> -1 Then
+            For c = 0 To posicoes1 - 1
+                Console.Write(array(c, coluna - 1))
+                Console.Write(" ")
+            Next
+        End If
+    End Sub
+    Sub AR2mostrarCharAlt(array(,) As Integer, posicoes1 As Integer, posicoes2 As Integer, Optional linha As Integer = -1, Optional coluna As Integer = -1)
+        Dim c, c2 As Byte
+        If linha And coluna <> -1 And linha <> -1 Then
+            For c2 = 0 To posicoes2 - 1
+                For c = 0 To posicoes1 - 1
+                    Console.Write(array(c, c2))
+                Next
+            Next
+        ElseIf linha <> -1 Then
+            For c = 0 To posicoes2 - 1
+                Console.Write(array(linha - 1, c))
+            Next
+        ElseIf coluna <> -1 Then
+            For c = 0 To posicoes1 - 1
+                Console.Write(array(c, coluna - 1))
+            Next
+        End If
+    End Sub
+    Sub AR2mostrarInteger(array(,) As Integer, posicoes1 As Integer, posicoes2 As Integer, Optional linha As Integer = -1, Optional coluna As Integer = -1)
+        Dim c, c2 As Byte
+        If linha And coluna <> -1 And linha <> -1 Then
+            For c2 = 0 To posicoes2 - 1
+                For c = 0 To posicoes1 - 1
+                    Console.Write(array(c, c2))
+                    Console.Write(" ")
+                Next
+            Next
+        ElseIf linha <> -1 Then
+            For c = 0 To posicoes2 - 1
+                Console.Write(array(linha - 1, c))
+                Console.Write(" ")
+            Next
+        ElseIf coluna <> -1 Then
+            For c = 0 To posicoes1 - 1
+                Console.Write(array(c, coluna - 1))
+                Console.Write(" ")
+            Next
+        End If
+    End Sub
+    Function AR2mediaDouble(array(,) As Double, posicoes1 As Integer, posicoes2 As Integer, Optional somaToggle As Boolean = False, Optional linha As Integer = -1, Optional coluna As Integer = -1)
+        Dim c, c2 As Byte
+        Dim media As Double
+        If linha And coluna <> -1 And linha <> -1 Then
+            For c2 = 0 To posicoes2 - 1
+                For c = 0 To posicoes1 - 1
+                    media += array(c, c2)
+                Next
+            Next
+        ElseIf linha <> -1 Then
+            For c = 0 To posicoes2 - 1
+                media += array(linha - 1, c)
+            Next
+        ElseIf coluna <> -1 Then
+            For c = 0 To posicoes1 - 1
+                media += array(c, coluna - 1)
+            Next
+        End If
+        If Not somaToggle Then
+            media /= (posicoes1 * posicoes2)
+        End If
+        Return media
+    End Function
+    Function AR2mediaInteger(array(,) As Integer, posicoes1 As Integer, posicoes2 As Integer, Optional somaToggle As Boolean = False, Optional linha As Integer = -1, Optional coluna As Integer = -1)
+        Dim c, c2 As Byte
+        Dim media As Double
+        If linha And coluna <> -1 And linha <> -1 Then
+            For c2 = 0 To posicoes2 - 1
+                For c = 0 To posicoes1 - 1
+                    media += array(c, c2)
+                Next
+            Next
+        ElseIf linha <> -1 Then
+            For c = 0 To posicoes2 - 1
+                media += array(linha - 1, c)
+            Next
+        ElseIf coluna <> -1 Then
+            For c = 0 To posicoes1 - 1
+                media += array(c, coluna - 1)
+            Next
+        End If
+        If Not somaToggle Then
+            media /= (posicoes1 * posicoes2)
+        End If
+        Return media
+    End Function
+    Sub AR2MaiorMenor(array(,) As Integer, ByRef maior As Integer, ByRef menor As Integer, posicoes1 As Integer, posicoes2 As Integer, Optional coords As Boolean = False, Optional ByRef cmaior As Integer = -1, Optional ByRef cmenor As Integer = -1, Optional ByRef lmaior As Integer = -1, Optional ByRef lmenor As Integer = -1)
+        Dim c, c2 As Integer
+        maior = array(0, 0)
+        menor = array(0, 0)
+        If coords Then
+            For c2 = 0 To posicoes2 - 1
+                For c = 0 To posicoes1 - 1
+                    If array(c, c2) > maior Then
+                        maior = array(c, c2)
+                        lmaior = c
+                        cmaior = c2
+                    End If
+                    If array(c, c2) < menor Then
+                        menor = array(c, c2)
+                        cmenor = c2
+                        lmenor = c
+                    End If
+                Next
+            Next
+        Else
+            For c2 = 0 To posicoes2 - 1
+                For c = 0 To posicoes1 - 1
+                    If array(c, c2) > maior Then
+                        maior = array(c, c2)
+                    End If
+                    If array(c, c2) < menor Then
+                        menor = array(c, c2)
+                    End If
+                Next
+            Next
+        End If
     End Sub
 End Module
 
