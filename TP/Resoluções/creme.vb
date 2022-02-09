@@ -402,6 +402,27 @@ Parâmetro de nº de opções errados, tem q ser no minimo 3 e no maximo 7")
             End While
         Next
     End Sub
+    Sub AR2mostrarString(array(,) As String, posicoes1 As Integer, posicoes2 As Integer, Optional linha As Integer = -1, Optional coluna As Integer = -1)
+        Dim c, c2 As Byte
+        If linha And coluna <> -1 And linha <> -1 Then
+            For c2 = 0 To posicoes2 - 1
+                For c = 0 To posicoes1 - 1
+                    Console.Write(array(c, c2))
+                    Console.Write(" ")
+                Next
+            Next
+        ElseIf linha <> -1 Then
+            For c = 0 To posicoes2 - 1
+                Console.Write(array(linha - 1, c))
+                Console.Write(" ")
+            Next
+        ElseIf coluna <> -1 Then
+            For c = 0 To posicoes1 - 1
+                Console.Write(array(c, coluna - 1))
+                Console.Write(" ")
+            Next
+        End If
+    End Sub
     Sub AR2mostrarChar(array(,) As Char, posicoes1 As Integer, posicoes2 As Integer, Optional linha As Integer = -1, Optional coluna As Integer = -1)
         Dim c, c2 As Byte
         If linha And coluna <> -1 And linha <> -1 Then
@@ -442,6 +463,27 @@ Parâmetro de nº de opções errados, tem q ser no minimo 3 e no maximo 7")
         End If
     End Sub
     Sub AR2mostrarInteger(array(,) As Integer, posicoes1 As Integer, posicoes2 As Integer, Optional linha As Integer = -1, Optional coluna As Integer = -1)
+        Dim c, c2 As Byte
+        If linha And coluna <> -1 And linha <> -1 Then
+            For c2 = 0 To posicoes2 - 1
+                For c = 0 To posicoes1 - 1
+                    Console.Write(array(c, c2))
+                    Console.Write(" ")
+                Next
+            Next
+        ElseIf linha <> -1 Then
+            For c = 0 To posicoes2 - 1
+                Console.Write(array(linha - 1, c))
+                Console.Write(" ")
+            Next
+        ElseIf coluna <> -1 Then
+            For c = 0 To posicoes1 - 1
+                Console.Write(array(c, coluna - 1))
+                Console.Write(" ")
+            Next
+        End If
+    End Sub
+    Sub AR2mostrarDouble(array(,) As Double, posicoes1 As Integer, posicoes2 As Integer, Optional linha As Integer = -1, Optional coluna As Integer = -1)
         Dim c, c2 As Byte
         If linha And coluna <> -1 And linha <> -1 Then
             For c2 = 0 To posicoes2 - 1
@@ -504,9 +546,15 @@ Parâmetro de nº de opções errados, tem q ser no minimo 3 e no maximo 7")
             Next
         End If
         If Not somaToggle Then
-            media /= (posicoes1 * posicoes2)
+            If linha = -1 And coluna = -1 Then
+                media /= (posicoes1 * posicoes2)
+            ElseIf linha <> -1 Then
+                media /= posicoes2
+            ElseIf coluna <> -1 Then
+                media /= posicoes1
+            End If
         End If
-        Return media
+            Return media
     End Function
     Sub AR2MaiorMenor(array(,) As Integer, ByRef maior As Integer, ByRef menor As Integer, posicoes1 As Integer, posicoes2 As Integer, Optional coords As Boolean = False, Optional ByRef cmaior As Integer = -1, Optional ByRef cmenor As Integer = -1, Optional ByRef lmaior As Integer = -1, Optional ByRef lmenor As Integer = -1)
         Dim c, c2 As Integer
@@ -537,6 +585,30 @@ Parâmetro de nº de opções errados, tem q ser no minimo 3 e no maximo 7")
                         menor = array(c, c2)
                     End If
                 Next
+            Next
+        End If
+    End Sub
+    Sub AR2diagonal(array(,) As Integer, posicoes As Integer, Optional secundariaToggle As Boolean = False, Optional modif As Integer = 0)
+        Dim c As Integer
+        If Not secundariaToggle Then
+            For c = 0 + modif To posicoes - 1
+                If c < 0 Then
+                    c = 1
+                End If
+                If c > posicoes - 1 Then
+                    c = posicoes - 1
+                End If
+                Console.Write(array(c, c) & " ")
+            Next
+        Else
+            For c = 0 + modif To posicoes - 1
+                If c < 0 Then
+                    c = 1
+                End If
+                If c > posicoes - 1 Then
+                    c = posicoes - 1
+                End If
+                Console.Write(array(c, (posicoes - 1 - c)) & " ")
             Next
         End If
     End Sub
