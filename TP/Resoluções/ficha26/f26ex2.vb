@@ -73,6 +73,10 @@
         Console.WriteLine(nomes(c2))
         esperaAlt()
         Console.WriteLine("Quais os alunos que passariam de ano (no máximo com 2 negativas)")
+        melhores(notas, nomes)
+        esperaAlt()
+        vintes(nomes, notas, disciplinas)
+        esperaAlt()
 
     End Sub
 End Module

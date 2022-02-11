@@ -612,6 +612,76 @@ Parâmetro de nº de opções errados, tem q ser no minimo 3 e no maximo 7")
             Next
         End If
     End Sub
-End Module
 
+    Sub melhores(notas(,) As Double, nomes() As String)
+        Dim l, c As Integer
+        Dim maior_1, maior_2, maior_3
+        Dim maior1, maior2, maior3 As String
+
+        For l = 0 To 6
+            For c = 0 To 9
+                If notas(l, c) > maior_1 Then
+                    maior1 = nomes(c)
+
+                End If
+                If notas(l, c) > maior_2 And notas(l, c) < maior1 Then
+                    maior2 = nomes(c)
+                End If
+                If notas(l, c) > maior_3 And notas(l, c) < maior2 Then
+                    maior3 = nomes(c)
+                End If
+            Next
+        Next
+        Console.WriteLine("Os 3 melhores alunos são:{0},{1},{2}", maior1, maior2, maior3)
+
+    End Sub
+
+    Sub vintes(nomes() As String, notas(,) As Double, disciplinas() As String)
+        Dim l, c As Integer
+
+        For l = 0 To 6
+            For c = 0 To 9
+                If notas(l, c) = 20 Then
+                    Console.WriteLine("O aluno" & nomes(c) & "teve 20 a " & disciplinas(l) & ".")
+                End If
+            Next
+        Next
+
+    End Sub
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+End Module
 
