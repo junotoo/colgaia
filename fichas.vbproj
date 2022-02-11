@@ -4,6 +4,21 @@
     <OutputType>Exe</OutputType>
     <RootNamespace>fichas</RootNamespace>
     <TargetFramework>net6.0</TargetFramework>
-    <StartupObject>fichas.f26ex2</StartupObject>
+    <StartupObject>fichas.f25ex6</StartupObject>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="AI\**" />
+    <Compile Remove="FAC\**" />
+    <Compile Remove="TP\Plugins VS\**" />
+    <Compile Remove="TP\Testes\**" />
+    <EmbeddedResource Remove="AI\**" />
+    <EmbeddedResource Remove="FAC\**" />
+    <EmbeddedResource Remove="TP\Plugins VS\**" />
+    <EmbeddedResource Remove="TP\Testes\**" />
+    <None Remove="AI\**" />
+    <None Remove="FAC\**" />
+    <None Remove="TP\Plugins VS\**" />
+    <None Remove="TP\Testes\**" />
+  </ItemGroup>
 </Project>

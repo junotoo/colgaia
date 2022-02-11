@@ -46,14 +46,14 @@ Pressione qualquer tecla para continuar...")
     End Sub
     Function pedirDouble(Optional msg As String = "Introduza um valor: ", Optional max As Double = 1.7976931348623157E+308, Optional min As Double = -1.7976931348623157E+308, Optional msgErro As String = "O valor introduzido é inválido!")
         Dim num As Double = min
-        While num > min And num < max
+        Do
             Console.Write(msg)
             num = Console.ReadLine
             If num > max Or num < min Then
                 Console.WriteLine(msgErro)
                 esperaAlt()
             End If
-        End While
+        Loop While num > max Or num < min
         Return num
     End Function
     Function numPar(num As Integer)
@@ -206,59 +206,52 @@ Pressione qualquer tecla para continuar...")
             Console.Write(" ")
         Next
     End Sub
-
-    Function menu(nopts As Byte, opt1 As String, opt2 As String, opt3 As String, Optional opt4 As String = vbNullString, Optional opt5 As String = vbNullString, Optional opt6 As String = vbNullString, Optional opt7 As String = vbNullString)
-        '
-        'alterar com length e + cenas
-        '
-        '
+    Function menu(nopts As Byte, opts() As String)
         Dim optquit As String = "Terminar programa"
         Dim x As Byte
-        'Console.WriteLine("##########################################")
-        Select Case nopts
-            Case 3
-                Console.WriteLine("#  1  {0}", opt1) 'numeração automatica aqui
-                Console.WriteLine("#  2  {0}", opt2)
-                Console.WriteLine("#  3  {0}", opt3)
-                Console.WriteLine("#  0  {0}", optquit)
-            Case 4
-                Console.WriteLine("#  1  {0}", opt1) 'numeração automatica aqui
-                Console.WriteLine("#  2  {0}", opt2)
-                Console.WriteLine("#  3  {0}", opt3)
-                Console.WriteLine("#  4  {0}", opt4)
-                Console.WriteLine("#  0  {0}", optquit)
-            Case 5
-                Console.WriteLine("#  1  {0}", opt1) 'numeração automatica aqui
-                Console.WriteLine("#  2  {0}", opt2)
-                Console.WriteLine("#  3  {0}", opt3)
-                Console.WriteLine("#  4  {0}", opt4)
-                Console.WriteLine("#  5  {0}", opt5)
-                Console.WriteLine("#  0  {0}", optquit)
-            Case 6
-                Console.WriteLine("#  1  {0}", opt1) 'numeração automatica aqui
-                Console.WriteLine("#  2  {0}", opt2)
-                Console.WriteLine("#  3  {0}", opt3)
-                Console.WriteLine("#  4  {0}", opt4)
-                Console.WriteLine("#  5  {0}", opt5)
-                Console.WriteLine("#  6  {0}", opt6)
-                Console.WriteLine("#  0  {0}", optquit)
-            Case 7
-                Console.WriteLine("#  1  {0}", opt1) 'numeração automatica aqui
-                Console.WriteLine("#  2  {0}", opt2)
-                Console.WriteLine("#  3  {0}", opt3)
-                Console.WriteLine("#  4  {0}", opt4)
-                Console.WriteLine("#  5  {0}", opt5)
-                Console.WriteLine("#  6  {0}", opt6)
-                Console.WriteLine("#  7  {0}", opt7)
-                Console.WriteLine("#  0  {0}", optquit)
-            Case Else
-                Console.WriteLine("DEBUG
-#######################
-Parâmetro de nº de opções errados, tem q ser no minimo 3 e no maximo 7")
-        End Select
+        Dim c, c2 As Integer
+        Dim maiorlen As Integer
+        For c = 0 To nopts - 1
+            If opts(c).Length() > maiorlen Then
+                maiorlen = opts(c).Length()
+            End If
+        Next
+        For c = 0 To nopts - 1
+            Do
+                If opts(c).Length() <= maiorlen + 1 Then
+                    opts(c) = opts(c) & " "
+                End If
+            Loop Until opts(c).Length() = maiorlen + 2
+
+        Next
+
+        For c2 = 0 To maiorlen + 8
+            Console.Write("/")
+        Next
+        Console.WriteLine("")
+        Console.Write("/")
+        For c2 = 0 To maiorlen + 6
+            Console.Write(" ")
+        Next
+        Console.WriteLine("/")
+        For c = 0 To nopts - 1
+            Console.WriteLine("#  {0}  {1}/", c + 1, opts(c))
+        Next
+        Console.Write("/")
+
+        For c2 = 0 To maiorlen + 6
+            Console.Write(" ")
+        Next
+        Console.WriteLine("/")
+        For c2 = 0 To maiorlen + 8
+            Console.Write("/")
+        Next
+        Console.WriteLine("
+")
         Console.Write("Opção a selecionar: ")
         x = Console.ReadLine()
-        Return X
+        Console.Clear()
+        Return x
     End Function
     Function ARmediaInteger(array() As Integer, posicoes As Integer)
         Dim c As Integer
