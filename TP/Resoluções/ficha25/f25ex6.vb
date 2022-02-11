@@ -5,9 +5,8 @@
         Dim lido As Boolean = False
         Dim quit As Boolean = False
         While quit = False
-            opt = menu(4, "Leitura de valores", "Mostrar valores", "Inverter valores", "Média dos valores")
             Console.Clear()
-
+            opt = menu(4, {"Leitura de 10 valores", "Mostrar valores", "Inverter Valores", "Média"})
             Select Case opt
                 Case 1
                     ARpedirInteger(array, 10)
