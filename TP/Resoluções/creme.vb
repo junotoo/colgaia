@@ -224,28 +224,31 @@ Pressione qualquer tecla para continuar...")
             Loop Until opts(c).Length() = maiorlen + 2
 
         Next
-
-        For c2 = 0 To maiorlen + 8
-            Console.Write("/")
+        Console.Write("╔")
+        For c2 = 0 To maiorlen + 7
+            Console.Write("═")
         Next
+        Console.Write("╗")
         Console.WriteLine("")
-        Console.Write("/")
-        For c2 = 0 To maiorlen + 6
+        Console.Write("║")
+        For c2 = 0 To maiorlen + 7
             Console.Write(" ")
         Next
-        Console.WriteLine("/")
+        Console.WriteLine("║")
         For c = 0 To nopts - 1
-            Console.WriteLine("#  {0}  {1}/", c + 1, opts(c))
+            Console.WriteLine("╠═  {0}  {1}║", c + 1, opts(c))
         Next
-        Console.Write("/")
-
-        For c2 = 0 To maiorlen + 6
+        Console.Write("║")
+        For c2 = 0 To maiorlen + 7
             Console.Write(" ")
         Next
-        Console.WriteLine("/")
-        For c2 = 0 To maiorlen + 8
-            Console.Write("/")
+        Console.Write("║")
+        Console.WriteLine("")
+        Console.Write("╚")
+        For c2 = 0 To maiorlen + 7
+            Console.Write("═")
         Next
+        Console.Write("╝")
         Console.WriteLine("
 ")
         Console.Write("Opção a selecionar: ")
@@ -547,7 +550,7 @@ Pressione qualquer tecla para continuar...")
                 media /= posicoes1
             End If
         End If
-            Return media
+        Return media
     End Function
     Sub AR2MaiorMenor(array(,) As Integer, ByRef maior As Integer, ByRef menor As Integer, posicoes1 As Integer, posicoes2 As Integer, Optional coords As Boolean = False, Optional ByRef cmaior As Integer = -1, Optional ByRef cmenor As Integer = -1, Optional ByRef lmaior As Integer = -1, Optional ByRef lmenor As Integer = -1)
         Dim c, c2 As Integer
@@ -641,40 +644,34 @@ Pressione qualquer tecla para continuar...")
         Next
 
     End Sub
+    Sub contar_maiorMenor(ByRef c As Integer, repeticoes As Integer, opc As String, Optional maior As Integer = 32767, Optional menor As Integer = -32767)
+        Dim c_maior As Integer = 0
+        Dim c_menor As Integer = 0
+        Dim i As Integer
+        Dim num As Integer
 
 
 
+        For i = 0 To repeticoes - 1
+            num = pedirInteger()
+            If num > maior Then
+                c_maior += 1
+            End If
+            If num < menor Then
+                c_menor += 1
+            End If
+        Next
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        If opc = "maior" Then
+            c = c_maior
+        Else
+            If opc = "menor" Then
+                c = c_menor
+            End If
+        End If
+    End Sub
 
 End Module
 

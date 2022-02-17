@@ -1,12 +1,12 @@
 ﻿Module f27ex2
     Sub Main(args As String())
         Dim word As String
-
-        Console.WriteLine("Insira uma palavra:")
-        word = Console.ReadLine()
+        word = pedirString("Introduza uma palavra: ")
+        Console.Clear()
+        Console.WriteLine(Mid(word, 1, 4))
+        word.Reverse()
+        Console.WriteLine(Mid(word, 1, 4))
         esperaAlt()
-
-        Console.WriteLine(StrReverse(word))
 
     End Sub
 
