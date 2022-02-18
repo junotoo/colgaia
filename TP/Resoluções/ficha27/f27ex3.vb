@@ -1,7 +1,7 @@
 ﻿Module f27ex3
     Sub Main(args As String())
-        Dim seq As String
-        Dim seq2 As String
+        Dim seq As String = 0
+        Dim seq2 As String = 0
 
         Console.OutputEncoding = System.Text.Encoding.UTF8
 

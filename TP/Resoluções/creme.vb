@@ -210,7 +210,9 @@ Pressione qualquer tecla para continuar...")
         Dim x As Byte
         Dim c, c2 As Integer
         Dim maiorlen As Integer
+        Dim quit As String = "Terminar Programa"
         For c = 0 To nopts - 1
+            maiorlen = quit.Length()
             If opts(c).Length() > maiorlen Then
                 maiorlen = opts(c).Length()
             End If
@@ -220,8 +222,10 @@ Pressione qualquer tecla para continuar...")
                 If opts(c).Length() <= maiorlen + 1 Then
                     opts(c) = opts(c) & " "
                 End If
-            Loop Until opts(c).Length() = maiorlen + 2
-
+                If quit.Length() <= maiorlen + 2 Then
+                    quit = quit & " "
+                End If
+            Loop Until opts(c).Length() = maiorlen + 2 And quit.Length() = maiorlen + 2
         Next
         Console.Write("╔")
         For c2 = 0 To maiorlen + 7
@@ -237,6 +241,7 @@ Pressione qualquer tecla para continuar...")
         For c = 0 To nopts - 1
             Console.WriteLine("╠═  {0}  {1}║", c + 1, opts(c))
         Next
+        Console.WriteLine("╠═  0  {0}║", quit)
         Console.Write("║")
         For c2 = 0 To maiorlen + 7
             Console.Write(" ")
@@ -610,9 +615,10 @@ Pressione qualquer tecla para continuar...")
 
     Sub melhores(notas(,) As Double, nomes() As String)
         Dim l, c As Integer
-        Dim maior_1, maior_2, maior_3
-        Dim maior1, maior2, maior3 As String
-
+        Dim maior_1, maior_2, maior_3 As Double
+        Dim maior1 As String = ""
+        Dim maior2 As String = ""
+        Dim maior3 As String = ""
         For l = 0 To 6
             For c = 0 To 9
                 If notas(l, c) > maior_1 Then
