@@ -1,5 +1,5 @@
 ﻿Module f27ex5
     Sub Main(args As String)
-        menu()
+        Dim opt As Byte
     End Sub
 End Module
