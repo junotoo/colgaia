@@ -1,6 +1,7 @@
 ﻿Module f26ex2
     Sub Main(args As String())
         Dim notas(7, 10) As Double
+        Dim aluno1, aluno2, aluno3 As String
         Dim c As Byte
         Dim nomes(10) As String
         Dim maior As Double
@@ -78,6 +79,13 @@
         vintes(nomes, notas, disciplinas)
         esperaAlt()
         For c2 = 0 To 6
+            For c = 0 To 9
+                If notas(c2, c) >= 9.5 Then
+
+                End If
+
+            Next
+        Next
 
     End Sub
 End Module
