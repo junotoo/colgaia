@@ -4,7 +4,7 @@
         word = pedirString("Introduza uma palavra: ")
         Console.Clear()
         Console.WriteLine(Mid(word, 1, 4))
-        word.Reverse()
+        word = StrReverse(word)
         Console.WriteLine(Mid(word, 1, 4))
         esperaAlt()
 
