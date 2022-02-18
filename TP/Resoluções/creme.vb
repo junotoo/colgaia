@@ -207,7 +207,6 @@ Pressione qualquer tecla para continuar...")
         Next
     End Sub
     Function menu(nopts As Byte, opts() As String)
-        Dim optquit As String = "Terminar programa"
         Dim x As Byte
         Dim c, c2 As Integer
         Dim maiorlen As Integer
