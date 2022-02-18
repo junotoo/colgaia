@@ -77,6 +77,7 @@
         esperaAlt()
         vintes(nomes, notas, disciplinas)
         esperaAlt()
+        For 
 
     End Sub
 End Module
