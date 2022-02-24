@@ -673,5 +673,41 @@ Pressione qualquer tecla para continuar...")
         End If
     End Sub
 
-End Module
+    Sub menu_f27(ByRef opt As Byte)
+        Console.WriteLine("1 - Leitura de um Nome:")
+        Console.WriteLine("2 -  Inserir um sobrenome:")
+        Console.WriteLine("3 - Passar para Maiusculas:")
+        Console.WriteLine("4 - Colocar o nome na ordem inversa:")
+        Console.WriteLine(" ")
+        Console.WriteLine(" ")
+        Console.WriteLine("5 -SAIR")
+        Console.WriteLine(" ")
+        Console.WriteLine(" ")
+        Console.WriteLine("Prima uma tecla:_")
+        opt = Console.ReadLine()
 
+
+
+    End Sub
+
+
+    Sub menu_f28ex1(ByRef opt As Byte)
+
+        Console.WriteLine("1 - Inserção de três frases:")
+        Console.WriteLine("2 - Comparação entre frases:")
+        Console.WriteLine("3 - Frase com mais caracteres:")
+        Console.WriteLine("4 - Frase com mais vogais:")
+        Console.WriteLine(" ")
+        Console.WriteLine(" ")
+        Console.WriteLine("5 -SAIR")
+        Console.WriteLine(" ")
+        Console.WriteLine(" ")
+        Console.WriteLine("Prima uma tecla:_")
+        opt = Console.ReadLine()
+
+
+
+    End Sub
+
+
+End Module
