@@ -207,28 +207,23 @@ Pressione qualquer tecla para continuar...")
         Next
     End Sub
     Function menu(nopts As Byte, opts() As String)
+        Dim optquit As String = "Terminar programa"
         Dim x As Byte
         Dim c, c2 As Integer
         Dim maiorlen As Integer
-        Dim quit As String = "Terminar Programa"
-        maiorlen = quit.Length()
         For c = 0 To nopts - 1
             If opts(c).Length() > maiorlen Then
                 maiorlen = opts(c).Length()
             End If
         Next
         For c = 0 To nopts - 1
-
             Do
-                If opts(c).Length() <= maiorlen + 3 Then
+                If opts(c).Length() <= maiorlen + 1 Then
                     opts(c) = opts(c) & " "
                 End If
-                If quit.Length() <= maiorlen + 3 Then
-                    quit = quit & " "
-                End If
-            Loop Until opts(c).Length() >= maiorlen + 4 And quit.Length() >= maiorlen + 4
+            Loop Until opts(c).Length() = maiorlen + 2
+
         Next
-        maiorlen += 2
         Console.Write("╔")
         For c2 = 0 To maiorlen + 7
             Console.Write("═")
@@ -243,7 +238,6 @@ Pressione qualquer tecla para continuar...")
         For c = 0 To nopts - 1
             Console.WriteLine("╠═  {0}  {1}║", c + 1, opts(c))
         Next
-        Console.WriteLine("╠═  0  {0}║", quit)
         Console.Write("║")
         For c2 = 0 To maiorlen + 7
             Console.Write(" ")
@@ -617,10 +611,9 @@ Pressione qualquer tecla para continuar...")
 
     Sub melhores(notas(,) As Double, nomes() As String)
         Dim l, c As Integer
-        Dim maior_1, maior_2, maior_3 As Double
-        Dim maior1 As String = ""
-        Dim maior2 As String = ""
-        Dim maior3 As String = ""
+        Dim maior_1, maior_2, maior_3
+        Dim maior1, maior2, maior3 As String
+
         For l = 0 To 6
             For c = 0 To 9
                 If notas(l, c) > maior_1 Then
@@ -680,5 +673,41 @@ Pressione qualquer tecla para continuar...")
         End If
     End Sub
 
-End Module
+    Sub menu_f27(ByRef opt As Byte)
+        Console.WriteLine("1 - Leitura de um Nome:")
+        Console.WriteLine("2 -  Inserir um sobrenome:")
+        Console.WriteLine("3 - Passar para Maiusculas:")
+        Console.WriteLine("4 - Colocar o nome na ordem inversa:")
+        Console.WriteLine(" ")
+        Console.WriteLine(" ")
+        Console.WriteLine("5 -SAIR")
+        Console.WriteLine(" ")
+        Console.WriteLine(" ")
+        Console.WriteLine("Prima uma tecla:_")
+        opt = Console.ReadLine()
 
+
+
+    End Sub
+
+
+    Sub menu_f28ex1(ByRef opt As Byte)
+
+        Console.WriteLine("1 - Inserção de três frases:")
+        Console.WriteLine("2 - Comparação entre frases:")
+        Console.WriteLine("3 - Frase com mais caracteres:")
+        Console.WriteLine("4 - Frase com mais vogais:")
+        Console.WriteLine(" ")
+        Console.WriteLine(" ")
+        Console.WriteLine("5 -SAIR")
+        Console.WriteLine(" ")
+        Console.WriteLine(" ")
+        Console.WriteLine("Prima uma tecla:_")
+        opt = Console.ReadLine()
+
+
+
+    End Sub
+
+
+End Module

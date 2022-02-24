@@ -19,7 +19,9 @@
                     End If
 
                 Case 3
-                    array.Reverse(array, 0, 9)
+#Disable Warning BC42025 ' Access of shared member, constant member, enum member or nested type through an instance
+                    array.Reverse(array)
+#Enable Warning BC42025 ' Access of shared member, constant member, enum member or nested type through an instance
                     Console.WriteLine("Valores Invertidos!")
                 Case 4
                     Console.WriteLine("A média dos valores introduzidos é {0}.", ARmediaInteger(array, 10))

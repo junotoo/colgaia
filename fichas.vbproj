@@ -4,7 +4,7 @@
     <OutputType>Exe</OutputType>
     <RootNamespace>fichas</RootNamespace>
     <TargetFramework>net6.0</TargetFramework>
-    <StartupObject>fichas.f27ex3</StartupObject>
+    <StartupObject>fichas.f27ex5</StartupObject>
   </PropertyGroup>
 
   <ItemGroup>

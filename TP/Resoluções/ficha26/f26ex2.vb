@@ -2,10 +2,12 @@
     Sub Main(args As String())
         Dim notas(7, 10) As Double
         Dim aluno1, aluno2, aluno3 As String
+        Dim maior1, maior2, maior3 As Double
         Dim c As Byte
+        Dim media, soma As Double
         Dim nomes(10) As String
         Dim maior As Double
-        Dim c2, c3, c4, c5, c6 As Integer
+        Dim cont, c2, c3, c4, c5, c6 As Integer
         Dim disciplinas() As String = {"PT", "MAT", "EF", "FQ", "TP", "FAC", "AI"}
         ARpedirString(nomes, 10,,, False, "Introduza o nome do ", "º aluno")
         AR2pedirDouble(notas, 7, 10,,, False, "Introduza a ", "ª nota do ", "º aluno: ", 20, 0)
@@ -78,14 +80,24 @@
         esperaAlt()
         vintes(nomes, notas, disciplinas)
         esperaAlt()
-        For c2 = 0 To 6
-            For c = 0 To 9
-                If notas(c2, c) >= 9.5 Then
-
+        Do
+            cont = cont + 1
+            For c2 = 0 To 9
+                For c = 0 To 6
+                    soma = soma + notas(c, c2)
+                    media = soma / 6
+                Next
+                If media > maior1 Then
+                    aluno1 = nomes(c2)
                 End If
-
+                If media > maior2 And media < maior1 Then
+                    aluno2 = nomes(c2)
+                End If
+                If media > maior3 And media < maior2 Then
+                    aluno3 = nomes(c2)
+                End If
             Next
-        Next
+        Loop Until cont = 2
 
     End Sub
 End Module

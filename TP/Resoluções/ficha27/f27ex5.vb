@@ -1,45 +1,29 @@
 ﻿Module f27ex5
     Sub Main(args As String())
-        Dim opt As Byte = 9
+        Dim opt As Byte
         Dim nome As String
-        Dim lido As Boolean = False
-        While opt <> 0
-            opt = menu(5, {"Leitura de um nome.", "Inserir um sobrenome.", "Passar para maiúsculas.", "Colocar o nome na ordem inversa.", "Mostrar nome"})
+        Dim sobrenome As String
+
+        Do
+            menu_f27(opt)
+            esperaAlt()
+
             Select Case opt
                 Case 1
-                    nome = pedirString()
-                    lido = True
+                    Console.WriteLine("Insira um nome:")
+                    nome = Console.ReadLine()
                 Case 2
-                    If lido Then
-                        nome &= " " & pedirString("Introduza o sobrenome: ")
-                    Else
-                        Console.WriteLine("Precisa de introduzir o nome primeiro...")
-                    End If
-                    esperaAlt()
+                    Console.WriteLine("Insira um Sobrenome:")
+                    sobrenome = Console.ReadLine()
                 Case 3
-                    If lido Then
-                        nome = LCase(nome)
-                        Console.WriteLine("Foi passado para maiusculas.")
-                    Else
-                        Console.WriteLine("Precisa de introduzir o nome primeiro...")
-                    End If
-                    esperaAlt()
+                    Console.WriteLine(UCase(nome) & " " & UCase(sobrenome))
                 Case 4
-                    If lido Then
-                        nome = StrReverse(nome)
-                        Console.WriteLine("O nome foi colocado na ordem inversa.")
-                    Else
-                        Console.WriteLine("Precisa de introduzir o nome primeiro...")
-                    End If
-                    esperaAlt()
-                Case 5
-                    If lido Then
-                        Console.WriteLine(nome)
-                    Else
-                        Console.WriteLine("Precisa de introduzir o nome primeiro...")
-                    End If
-                    esperaAlt()
+                    Console.WriteLine(StrReverse(nome) & " " & StrReverse(sobrenome))
+
             End Select
-        End While
+
+            esperaAlt()
+        Loop Until opt = 5
+
     End Sub
 End Module
