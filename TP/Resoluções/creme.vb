@@ -211,22 +211,24 @@ Pressione qualquer tecla para continuar...")
         Dim c, c2 As Integer
         Dim maiorlen As Integer
         Dim quit As String = "Terminar Programa"
+        maiorlen = quit.Length()
         For c = 0 To nopts - 1
-            maiorlen = quit.Length()
             If opts(c).Length() > maiorlen Then
                 maiorlen = opts(c).Length()
             End If
         Next
         For c = 0 To nopts - 1
+
             Do
-                If opts(c).Length() <= maiorlen + 1 Then
+                If opts(c).Length() <= maiorlen + 3 Then
                     opts(c) = opts(c) & " "
                 End If
-                If quit.Length() <= maiorlen + 2 Then
+                If quit.Length() <= maiorlen + 3 Then
                     quit = quit & " "
                 End If
-            Loop Until opts(c).Length() = maiorlen + 2 And quit.Length() = maiorlen + 2
+            Loop Until opts(c).Length() >= maiorlen + 4 And quit.Length() >= maiorlen + 4
         Next
+        maiorlen += 2
         Console.Write("╔")
         For c2 = 0 To maiorlen + 7
             Console.Write("═")
