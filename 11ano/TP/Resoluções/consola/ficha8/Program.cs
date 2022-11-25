@@ -94,18 +94,30 @@ namespace ficha8
             try
             {
                 dir1.Create();
-                FileStream fls = new FileStream(@"C:\tp\ficha8\ficheiro.txt", FileMode.OpenOrCreate, FileAccess.Write);
-                StreamWriter sw = new StreamWriter(fls);
+                FileStream fls = new FileStream(@"C:\tp\ficha8\ficheiro", FileMode.OpenOrCreate, FileAccess.Write);
+                BinaryWriter bw = new BinaryWriter(fls);
                 foreach (int i in lista)
                 {
-                    sw.WriteLine(i);
+                    bw.Write(i);
                 }
-                sw.Close();
+                bw.Close();
             }
             catch(IOException e)
             {
                 Console.WriteLine(e);
                 Console.ReadKey();
+            }
+        }
+        static void lerficheiro()
+        {
+            try
+            {
+                FileStream fls = new FileStream(@"C:\tp\ficha8\ficheiro", FileMode.OpenOrCreate, FileAccess.Read);
+                BinaryReader bw = new BinaryReader(fls);
+                bw.Read();
+            }catch(IOException ex)
+            {
+                Console.WriteLine(ex);
             }
         }
     }
