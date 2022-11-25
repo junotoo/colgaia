@@ -1,0 +1,240 @@
+De uma forma simplista, poderemos dizer que uma Base de Dados, consiste numa coleção de dados
+estruturados, organizados e armazenados de forma persistente.
+Para trabalharmos com uma BD, automatizada, não podemos esquecer que é fundamental a
+utilização de um Sistema Gestor de BD (SGBD).
+
+O SGBD é uma aplicação informática (software) que fornece a interface entre os dados que são
+armazenados fisicamente na BD e o utilizador, este por sua vez, deixa de ter de se preocupar com a
+forma como os dados são armazenados, pesquisados ou ordenados, pois é o SGBD que tem a
+responsabilidade desta tarefa.
+
+O SGBD é também uma ferramenta de criação, manutenção e gestão de bases de dados
+informatizadas.
+Existem vários sistemas gestores de BD, os que antecederam o modelo relacional e os da evolução após o modelo 
+relacional.
+
+Sistemas gestores que antecedem o modelo relacional
+1. Sistemas baseados em ficheiros;
+2. Modelo Hierárquico;
+3. Modelo em Rede.
+Modelos relacionais principal evolução
+1. Modelo orientado por objetos;
+2. Modelo objeto relacional.
+
+
+Não faz sentido falarmos de bases de dados sem falarmos
+da modelação de dados e de alguns termos a ela associados.
+Dados e Informação - De uma forma geral dados e informação podem e são muitas vezes confundidos, então qual a verdadeira 
+diferença entre eles?
+Dados- São elementos discretos que, isoladamente não têm qualquer significado.
+Informação - Estamos perante informação quando os dados são processados, interpretados e de alguma 
+forma relacionados, ou seja, quando os dados juntos fazem sentido e traduzem um determinado 
+significado.
+
+
+Dados
+ João (Nome)
+ Rua das Flores (Morada)
+ 26 (Número da porta)
+ Porto (Cidade)
+
+
+Informação
+• João Rua das Flores 26 Porto
+Informação
+A informação é um recurso vital e de extremamente importância para as organizações,
+Podemos dizer até, que o sucesso ou insucesso destas, se deve na sua maioria à informação que lá
+circula, no entanto esta deve ser de grande qualidade para que seja útil, essa qualidade depende de 5
+fatores:
+
+
+
+Qualidade da Informação (5 fatores):
+• Atualidade;
+• Correção;
+• Relevante;
+• Disponibilidade;
+• Legibilidade.
+
+
+
+Como vimos anteriormente, uma BD consiste numa coleção de dados estruturados, organizados e
+armazenados de forma persistente.
+Se falamos de uma Base de dados manual, conjunto de ficheiros em papel, estes devem estar
+organizados, rotulados, de fácil acesso, permitindo a sua consulta e recolha rápida de informação,
+devem ainda ser guardados durante os anos exigidos por lei.
+
+
+Se estamos a falar de uma DB automatizada/informatizada, o termo persistente não está por acaso na
+definição, significa que os dados são armazenados por uma aplicação informática e devem continuar
+a existir após:
+•Terminar a aplicação que o gere;
+•Terminar a sessão do utilizador;
+•Desligar o computador.
+Isto quer dizer que, os dados armazenados estão em memória permanente e não em memória volátil 
+(RAM).
+
+
+Sistemas Gestores de Bases de Dados
+Durante muitos anos a gestão dos dados foi sendo feita por aplicações informáticas escritas,
+especificamente para cada uma das situações que se pretendiam resolver, no entanto, com o evoluir
+da tecnologia foram desenvolvidas aplicações especificas para a gestão de dados independente do
+seu conteúdo ou objetivo. Os SGBD's.
+Então o que é um SGBD?
+É uma aplicação ou um conjunto de aplicações que fornece a interface entre os dados que são
+armazenados fisicamente na base de dados e utilizador desses dados. O utilizador não necessita
+saber qual o formato dos dados, como e onde são armazenados como são pesquisados e ordenados.
+
+
+Por sua vez, estas aplicações informáticas (SGBD) são usadas para definir, aceder, e gerir os dados
+existentes numa base de dados, ou seja, para que o SGBD seja útil e importante na gestão dos dados,
+deve ter determinadas características.
+Neste novo conceito, do uso do SGBD, ou nesta nova arquitetura, as aplicações passam a pedir o
+serviço diretamente a uma aplicação informática desenhada especificamente para esse efeito.
+O SGBD é a única entidade que manipula a base de dados, sendo a única entidade capaz
+de aceder diretamente e fisicamente à base de dados.
+
+
+Exemplos de SGBD’s
+ Access
+ DB2
+ Firebird
+ Ingres
+ Informix
+ MySQL
+Exemplos de SGBD’s
+• Oracle
+• Postgres
+• SQL Server
+• Sybase
+
+
+Quando devemos então optar por um SGBD?
+Sempre que: 
+1. A informação for armazenada de modo permanente;
+2.Queremos o controlo central dos dados;
+3.Queremos controlar redundâncias;
+4.Queremos controlar consistências e integridade dos dados;
+5.Queremos múltiplos utilizadores (concorrência);
+6.Queremos controlar acessos e segurança;
+7.Queremos partilhar dados entre utilizadores;
+8.Queremos independência dos dados das aplicações; 
+9.Queremos backups & recovery. 
+
+
+Requisitos Fundamentais de um SGBD
+O objetivo de um SGBD, como já foi referido, é fornecer um ambiente apropriado para aceder e
+armazenar informação na base de dados de forma fiável e eficiente. Para que isso aconteça o SGBD tem
+um conjunto de requisitos fundamentais, a saber:
+1. Eficiência;
+2. Robustez;
+3. Controlo de acessos;
+4. Persistência.
+
+
+Requisitos Fundamentais de um SGBD
+1. Eficiência;
+(Ser capaz de aceder, processar e alterar grandes volumes de dados de forma eficiente.)
+2. Robustez;
+(Manter os dados de forma consistente, mesmo após falhas de Hardware ou erros de Software.)
+3. Controlo de acessos;
+(Controlar o acesso a múltiplos utilizadores, aos dados de forma consistente a apesar dos utilizadores
+autorizados.)
+4. Persistência.
+(Manter os dados durante longos períodos, independentemente das aplicações que a eles acederem.)
+
+
+Serviços prestados por um SGBD
+Ao optar por um SGBD, os utilizadores têm como objetivo principal utilizar um recurso informático
+capaz de aceder, manipular e processar dados de uma forma relativamente normalizada, fiável e
+eficiente. Num SGBD, em geral para além dos dados, estão também armazenados os metadados,
+isto é, dados que contêm a definição dos próprios dados, nomeadamente, a definição das
+próprias tabelas, as regras de integridade, etc...
+
+
+O SGBD é responsável por fazer :
+1. Interação com o Gestor de Ficheiros;
+2. Gestão dos Dados;
+3. Integridade;
+4. Segurança;
+5. Backup & Recovery;
+6. Gestão da Concorrência;
+Uma das vantagens mais óbvias numa utilização de um SGBD é a utilização de um único conjunto
+lógico e organizado de dados, estruturas, autónomos das aplicações que os processam.
+
+
+Componentes de um SGBD
+Um sistema gestor de base de dados é constituído por um conjunto de aplicações que
+realizam tarefas bem específicas.
+1. Gestor de Ficheiros; 
+2. Gestor de Base de Dados; 
+3. Processador de queries; 
+4. Pré-Compilador ;
+5. Compilador de LDD/DDL. (Linguagem de Definição de Dados)
+
+
+Componentes de um SGBD
+1. Gestor de Ficheiros – Gere a alocação de espaço em disco e as estruturas utilizadas para representar 
+a informação em disco;
+2. Gestor de Base de Dados – Interface existente entre o nível dos dados e o nível das aplicações e
+queries;
+3. Processador de queries – Faz a conversão/tradução de comandos da linguagem utilizada para as
+queries, em instruções de baixo nível que sejam percetíveis pelo gestor de bases de dados;
+4. Pré-Compilador – Converte comandos embutidos da linguagem SQL ou outra em procedimentos
+e/ou funções normais da linguagem suporte;
+5. Compilador de LDD/DDL – Converte instruções da sub-linguagem DDL no conjunto de tabelas que
+contém os metadados armazenados num dicionário de dados.
+
+
+Utilizadores de um SGBD
+Os utilizadores de um SGBD podem ser classificados em categorias diferentes, de acordo com as 
+necessidades que tem de acesso às funcionalidades de um SGBD.
+• Programadores de Aplicações
+• Utilizadores Sofisticados
+• Utilizadores Especializados
+• Utilizadores Comuns
+• Administrador de Base de Dados - Pertence ao grupo dos utilizadores sofisticados e merece um 
+destaque especial. É o profissional de informática que é responsável pela administração da Base de 
+Dados (criação, alteração, manutenção, etc); 
+
+
+As funções do administrador são imensas, no entanto, 
+podem destacar-se as seguintes:
+1.Responsável máximo pelo bom funcionamento de todo o sistema;
+2.Criação e definição das Bases de Dados;
+3.Escolha das estruturas de suporte aos dados, índices, métodos de acesso, etc;
+4.Definir o perfil de acesso aos dados a todos os utilizadores;
+5.Especificação das regras de integridade da BD;
+6.Servir como elo de ligação aos diferentes utilizadores;
+7.Fazer a monotorização do desempenho do sistema, tomando as medidas necessárias para o 
+melhorar/afinar;
+8.Definir as estratégias de backup e recovery
+
+
+Numa tentativa de estabelecer um padrão para toda a indústria de desenvolvimento de tecnologias de
+bases de dados, foi definida a arquitetura ANSI/Sparc com o objetivo de permitir que um mesmo SGBD
+possa ser utilizado por vários tipos de utilizadores ou sistemas, respeitando as particularidades e
+necessidades de cada um.
+É composta por 3 níveis indiferentes, cada um descrevendo a base de dados a um nível aplicacional
+fora do esquema e os dados no núcleo.
+Nível externo – definição de Views sobre o esquema conceptual global; consiste numa janela
+parcial, que é criada sobre a totalidade da base de dados. Permite trabalhar apenas com uma parte
+
+
+Nível conceptual – representação do modelo conceptual dos dados, independentemente de qualquer utilizador ou
+aplicação. Esta camada esconde os detalhes de implementação física dos ficheiros que armazenam os dados
+(ficheiro de dados e tipos de dados).
+Nível interno – armazenamento físico dos dados e definição das
+estruturas físicas que permitem deste um bom nível de
+desempenho (normalização).
+Este tipo de arquitetura permite:
+a) Independência física;
+b) Independência lógica;
+c) Independência Programa/Dados. Nível Externo
+Nível 
+Conceptual
+Nível 
+Interno
+Dado
+s
+Nível aplicacional

@@ -1,0 +1,11 @@
+Escreva um programa em C# - que a partir de um menu no bloco principal, executa as seguintes funções:
+
+Função que que faz a leitura de uma série de números inteiros até o ultimo ser zero. O zero não entra na sequência.
+
+Função que grava um conjunto de nºs num ficheiro (no diretório local). O conjunto de nºs é recebido como parâmetro de entrada.
+
+Função que a partir do diretório local e do ficheiro gravado no ponto 2, informa o em primeiro lugar o total de números gravados
+no ficheiro (quantos), a seguir, lista estes nºs na horizontal, com 1 espaço entre eles. Exemplo:  201 2 5 1 30 1 45 ... 
+Existe uma prioridade na execução das funções. A função 3 só pode ser chamada caso a função 2 seja chamada anteriormente.
+ Por sua vez a função 2 deve ser chamada sempre que anteriormente a função 1 seja exeutada.
+
