@@ -11,6 +11,7 @@ namespace ficha8
     {
         static void Main(string[] args)
         {
+
             List<int> lista = new List<int>();
             int j = 0;
             int x = 0;
@@ -25,6 +26,7 @@ namespace ficha8
                     switch (i)
                     {
                         case 1:
+                            lista = new List<int>();
                             leitura(ref lista);
                             j++;
                             break;
@@ -45,7 +47,7 @@ namespace ficha8
                         case 3:
                             if (i > 0)
                             {
-                                
+                                lerficheiro();
                             }
                             else
                             {
@@ -76,17 +78,18 @@ namespace ficha8
                 int num = 0;
                 while (y == false)
                 {
-                    Console.Write("Introduza o {0}º valor: ", lista.Count);
+                    Console.Write("Introduza o {0}º valor: ", (lista.Count+1));
                     y = int.TryParse(Console.ReadLine(), out num);
                     if (!y)
                     {
                         Console.WriteLine("Introduza um valor válido. \n \n \n");
                         Console.WriteLine("Pressione qualquer tecla para continuar...");
                         Console.ReadKey();
-                    }else lista.Add(num);
+                    } else lista.Add(num);
                     Console.Clear();
                 }
-            } while(!lista.Contains(0));
+            } while (!lista.Contains(0));
+            lista.Remove(0);
         }
         static void escrever(List<int> lista)
         {
@@ -102,7 +105,7 @@ namespace ficha8
                 }
                 bw.Close();
             }
-            catch(IOException e)
+            catch (IOException e)
             {
                 Console.WriteLine(e);
                 Console.ReadKey();
@@ -114,11 +117,17 @@ namespace ficha8
             {
                 FileStream fls = new FileStream(@"C:\tp\ficha8\ficheiro", FileMode.OpenOrCreate, FileAccess.Read);
                 BinaryReader bw = new BinaryReader(fls);
-                bw.Read();
-            }catch(IOException ex)
-            {
-                Console.WriteLine(ex);
+                int nums = (File.ReadAllBytes(@"C:\tp\ficha8\ficheiro").Count()) / 4;
+                Console.WriteLine("Existem {0} números", nums);
+                for (int i = 0; i < nums; i++)
+                {
+                    Console.Write(bw.ReadInt32());
+                    Console.Write("\t");
+                }
+                bw.Close();
             }
+            catch (IOException ex) { Console.WriteLine(ex); }
+            Console.ReadKey();
         }
     }
 }
