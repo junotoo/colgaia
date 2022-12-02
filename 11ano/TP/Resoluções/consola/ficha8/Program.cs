@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.IO;
 
 namespace ficha8
 {
@@ -18,7 +18,7 @@ namespace ficha8
             while (true)
             {
                 Console.Clear();
-                Console.WriteLine("Ficha 8 \n\nSelecione uma opção:\n 1 - Ler \n 2 - Escrever\n 3 - Versão 3\n \n 0 - Sair do programa");
+                Console.WriteLine("Ficha 8 \n\nSelecione uma opção:\n 1 - Ler \n 2 - Escrever\n 3 - Ler ficheiro\n \n 0 - Sair do programa");
                 bool v = Int16.TryParse(Console.ReadLine(), out Int16 i);
                 Console.Clear();
                 if (v)
@@ -38,7 +38,7 @@ namespace ficha8
                             }
                             else
                             {
-                                Console.WriteLine("Deve fazer a leitura(opção 1 primeiro)...");
+                                Console.WriteLine("Deve fazer a leitura(opção 1) primeiro...");
                                 Console.WriteLine("Introduza um valor válido \n \n \n Pressione qualquer tecla para continuar...");
                                 Console.ReadKey();
                                 Console.Clear();
@@ -51,7 +51,7 @@ namespace ficha8
                             }
                             else
                             {
-                                Console.WriteLine("Deve fazer a escrita(opção 2 primeiro)...");
+                                Console.WriteLine("Deve fazer a escrita(opção 2) primeiro...");
                                 Console.WriteLine("Introduza um valor válido \n \n \n Pressione qualquer tecla para continuar...");
                                 Console.ReadKey();
                                 Console.Clear();
@@ -93,17 +93,22 @@ namespace ficha8
         }
         static void escrever(List<int> lista)
         {
-            DirectoryInfo dir1 = new DirectoryInfo(@"C:\tp\ficha8");
+            DirectoryInfo dir1 = new DirectoryInfo(@"C:\tp\ficha9");
             try
             {
                 dir1.Create();
-                FileStream fls = new FileStream(@"C:\tp\ficha8\ficheiro", FileMode.OpenOrCreate, FileAccess.Write);
-                BinaryWriter bw = new BinaryWriter(fls);
+                if (File.Exists(@"C:\tp\ficha8\Numeros.txt")) File.Delete(@"C:\tp\ficha8\Numeros.txt");
+                FileStream fls = new FileStream(@"C:\tp\ficha8\Numeros.txt", FileMode.OpenOrCreate, FileAccess.Write);
+                StreamWriter sw = new StreamWriter(fls);
                 foreach (int i in lista)
                 {
-                    bw.Write(i);
+                    sw.WriteLine(i.ToString());
                 }
-                bw.Close();
+                sw.Close();
+                Console.WriteLine("Valores introduzidos!");
+                Console.WriteLine("Introduza um valor válido \n \n \n Pressione qualquer tecla para continuar...");
+                Console.ReadKey();
+                Console.Clear();
             }
             catch (IOException e)
             {
@@ -115,16 +120,14 @@ namespace ficha8
         {
             try
             {
-                FileStream fls = new FileStream(@"C:\tp\ficha8\ficheiro", FileMode.OpenOrCreate, FileAccess.Read);
-                BinaryReader bw = new BinaryReader(fls);
-                int nums = (File.ReadAllBytes(@"C:\tp\ficha8\ficheiro").Count()) / 4;
-                Console.WriteLine("Existem {0} números", nums);
-                for (int i = 0; i < nums; i++)
+                FileStream fls = new FileStream(@"C:\tp\ficha8\Numeros.txt", FileMode.OpenOrCreate, FileAccess.Read);
+                StreamReader sr = new StreamReader(fls);
+                Console.Write("Existem {0} números: ", File.ReadAllLines(@"C:\tp\ficha9\Numeros.txt").Count());
+                for (int i = 0; i < File.ReadAllLines(@"C:\tp\ficha9\Numeros.txt").Count(); i++)
                 {
-                    Console.Write(bw.ReadInt32());
-                    Console.Write("\t");
+                    Console.Write(sr.ReadLine() + " ");
                 }
-                bw.Close();
+                sr.Close();
             }
             catch (IOException ex) { Console.WriteLine(ex); }
             Console.ReadKey();
