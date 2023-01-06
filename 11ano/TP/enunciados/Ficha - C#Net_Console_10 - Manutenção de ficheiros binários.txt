@@ -1,0 +1,12 @@
+Escreva um programa em C# - considerando os dados de um aluno: nome, idade,data de nascimento (aa-mm-dd).
+        O  Programa deve apresentar as funcionalidades do menu abaixo:
+Entrada de dados (um aluno de cada vez, em qualquer momento pode ser adicionado novos dados ao ficheiro)
+Consultar por nome (Mostra os dados do aluno)
+Consultar por idade (Mostra o nome dos alunos com a idade pretendida)
+Consultar por data de nascimento (Mostra o nome e idade dos alunos)
+Apagar um aluno (dado um nome apagar os dados deste aluno na estrutura de dados, tendo em conta a organização dos dados)
+Listar todos 
+Tenha em atenção os seguintes requisitos:
+
+Guarde os dados num ficheiro de forma a poder em qualquer momento voltar a trabalhar com os dados já inseridos. 
+O ficheiro de dados só deve ser criado uma vez, ou seja, caso exista, o ficheiro será atualizado pela ação das opções do programa.

@@ -1,0 +1,61 @@
+Customers Table:
+
+Customer ID    Customer Name    Phone Number    Email Address
+-------------------------------------------------------------
+1              John Doe         555-555-1234    johndoe@gmail.com
+2              Jane Smith       555-555-5678    janesmith@gmail.com
+3              Bob Johnson      555-555-9101    bobjohnson@gmail.com
+
+Parts Table:
+
+Part ID    Part Name    Manufacturer    Price    Quantity In Stock
+-----------------------------------------------------------------
+1          CPU          Intel           $100     20
+2          GPU          NVIDIA          $300     15
+3          RAM          Kingston        $50      25
+
+Services Table:
+
+Service ID    Service Name    Estimated Time    Cost
+---------------------------------------------------
+1             Laptop Screen Replacement    1 hour    $100
+2             Virus Removal              2 hours    $75
+3             Data Recovery              4 hours    $150
+
+Transactions Table:
+
+Transaction ID    Date/Time    Customer ID    Item/Service    Cost
+-----------------------------------------------------------------
+1                12/1/2022    1             CPU             $100
+2                12/2/2022    2             Laptop Screen Replacement    $100
+3                12/3/2022    3             Virus Removal    $75
+[10:46 PM]skritt: Here is an example of a database table for a computer parts and repair shop:
+Part_ID    Part_Name    Part_Description    Quantity    Price
+1    CPU    Intel Core i7    10    $300
+2    Motherboard    Asus ROG Strix    8    $200
+3    RAM    G.Skill Ripjaws    15    $100
+4    SSD    Samsung 970 EVO    20    $150
+5    GPU    Nvidia GTX 1080    5    $500
+
+This table would contain information about the various parts and products that are available in the computer parts and repair shop's inventory. Each part would be assigned a unique Part_ID, and the other columns would contain information about the part's name, description, quantity in stock, and price.
+
+This table could be used by employees to quickly and easily search for specific parts and view their availability and pricing. It could also be used to track inventory levels and alert employees when items need to be restocked.
+Here is an example of a repair table and a customers table that could be used in conjunction with the parts table mentioned earlier:
+
+Repair Table:
+Repair_ID    Part_ID    Customer_ID    Repair_Status    Repair_Notes
+1    2    101    In Progress    Motherboard not detected.
+2    3    102    Completed    RAM replaced.
+3    4    103    In Progress    SSD not detected.
+
+Customers Table:
+Customer_ID    Customer_Name    Customer_Address    Customer_Phone
+101    John Doe    123 Main St.    555-555-1212
+102    Jane Smith    456 Park Ave.    555-555-1213
+103    Bob Johnson    789 Elm St.    555-555-1214
+
+In this example, the repair table contains information about the repairs that are currently being performed at the computer parts and repair shop. Each repair is assigned a unique Repair_ID, and the other columns contain information about the part that is being repaired (referenced by the Part_ID column), the customer that the repair is for (referenced by the Customer_ID column), the repair's current status, and any notes about the repair.
+
+The customers table contains information about the shop's customers. Each customer is assigned a unique Customer_ID, and the other columns contain their name, address, and phone number.
+
+By combining these tables, employees at the computer parts and repair shop would be able to quickly and easily view information about the repairs that are currently in progress, as well as information about the customers and the parts involved in those repairs. This would help to improve the efficiency and accuracy of the repair process, as well as provide better service to customers.
