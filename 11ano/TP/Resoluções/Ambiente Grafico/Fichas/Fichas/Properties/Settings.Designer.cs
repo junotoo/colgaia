@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace _21_Juno_FichaCsharpWF_01.Properties
+namespace Fichas.Properties
 {
 
 

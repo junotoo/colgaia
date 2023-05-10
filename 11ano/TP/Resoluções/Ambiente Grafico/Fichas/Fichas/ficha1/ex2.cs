@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace _21_Juno_FichaCsharpWF_01
+namespace Fichas.ficha1
 {
     public partial class ex2 : Form
     {
@@ -17,14 +17,13 @@ namespace _21_Juno_FichaCsharpWF_01
             InitializeComponent();
         }
 
-        private void ex2_Load(object sender, EventArgs e)
-        {
-            
-        }
-
         private void btnSomar_Click(object sender, EventArgs e)
         {
-            txtsoma.Text = (int.Parse(txt1.Text) + int.Parse(txt2.Text)).ToString();
+            try
+            {
+                txtsoma.Text = (int.Parse(txt1.Text) + int.Parse(txt2.Text)).ToString();
+            }
+            catch { }
         }
     }
 }

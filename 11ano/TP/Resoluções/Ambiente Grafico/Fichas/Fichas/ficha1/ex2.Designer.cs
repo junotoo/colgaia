@@ -1,4 +1,4 @@
-﻿namespace _21_Juno_FichaCsharpWF_01
+﻿namespace Fichas.ficha1
 {
     partial class ex2
     {
@@ -28,60 +28,60 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txt1 = new System.Windows.Forms.TextBox();
-            this.txt2 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnSomar = new System.Windows.Forms.Button();
             this.txtsoma = new System.Windows.Forms.TextBox();
+            this.btnSomar = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txt2 = new System.Windows.Forms.TextBox();
+            this.txt1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // txt1
+            // txtsoma
             // 
-            this.txt1.Location = new System.Drawing.Point(24, 43);
-            this.txt1.Name = "txt1";
-            this.txt1.Size = new System.Drawing.Size(100, 20);
-            this.txt1.TabIndex = 0;
+            this.txtsoma.Enabled = false;
+            this.txtsoma.Location = new System.Drawing.Point(85, 123);
+            this.txtsoma.Name = "txtsoma";
+            this.txtsoma.Size = new System.Drawing.Size(100, 20);
+            this.txtsoma.TabIndex = 9;
             // 
-            // txt2
+            // btnSomar
             // 
-            this.txt2.Location = new System.Drawing.Point(165, 43);
-            this.txt2.Name = "txt2";
-            this.txt2.Size = new System.Drawing.Size(100, 20);
-            this.txt2.TabIndex = 1;
+            this.btnSomar.Location = new System.Drawing.Point(99, 78);
+            this.btnSomar.Name = "btnSomar";
+            this.btnSomar.Size = new System.Drawing.Size(75, 23);
+            this.btnSomar.TabIndex = 8;
+            this.btnSomar.Text = "Somar";
+            this.btnSomar.UseVisualStyleBackColor = true;
+            this.btnSomar.Click += new System.EventHandler(this.btnSomar_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
-            this.label1.Location = new System.Drawing.Point(133, 39);
+            this.label1.Location = new System.Drawing.Point(126, 28);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(24, 25);
-            this.label1.TabIndex = 2;
+            this.label1.TabIndex = 7;
             this.label1.Text = "+";
             // 
-            // btnSomar
+            // txt2
             // 
-            this.btnSomar.Location = new System.Drawing.Point(106, 89);
-            this.btnSomar.Name = "btnSomar";
-            this.btnSomar.Size = new System.Drawing.Size(75, 23);
-            this.btnSomar.TabIndex = 3;
-            this.btnSomar.Text = "Somar";
-            this.btnSomar.UseVisualStyleBackColor = true;
-            this.btnSomar.Click += new System.EventHandler(this.btnSomar_Click);
+            this.txt2.Location = new System.Drawing.Point(158, 32);
+            this.txt2.Name = "txt2";
+            this.txt2.Size = new System.Drawing.Size(100, 20);
+            this.txt2.TabIndex = 6;
             // 
-            // txtsoma
+            // txt1
             // 
-            this.txtsoma.Enabled = false;
-            this.txtsoma.Location = new System.Drawing.Point(92, 134);
-            this.txtsoma.Name = "txtsoma";
-            this.txtsoma.Size = new System.Drawing.Size(100, 20);
-            this.txtsoma.TabIndex = 4;
+            this.txt1.Location = new System.Drawing.Point(17, 32);
+            this.txt1.Name = "txt1";
+            this.txt1.Size = new System.Drawing.Size(100, 20);
+            this.txt1.TabIndex = 5;
             // 
             // ex2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(287, 176);
+            this.ClientSize = new System.Drawing.Size(281, 163);
             this.Controls.Add(this.txtsoma);
             this.Controls.Add(this.btnSomar);
             this.Controls.Add(this.label1);
@@ -89,7 +89,6 @@
             this.Controls.Add(this.txt1);
             this.Name = "ex2";
             this.Text = "ex2";
-            this.Load += new System.EventHandler(this.ex2_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -97,10 +96,10 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox txt1;
-        private System.Windows.Forms.TextBox txt2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnSomar;
         private System.Windows.Forms.TextBox txtsoma;
+        private System.Windows.Forms.Button btnSomar;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txt2;
+        private System.Windows.Forms.TextBox txt1;
     }
 }

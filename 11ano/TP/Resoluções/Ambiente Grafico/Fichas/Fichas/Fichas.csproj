@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{CBF587C4-C52C-47B8-BD0C-8EDEB2C68BE1}</ProjectGuid>
+    <ProjectGuid>{B62F8C4F-B51B-42F2-8B2A-E6BE0B513F79}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>_21_Juno_FichaCsharpWF_01</RootNamespace>
-    <AssemblyName>21_Juno_FichaCsharpWF_01</AssemblyName>
+    <RootNamespace>Fichas</RootNamespace>
+    <AssemblyName>Fichas</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -46,17 +46,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Ex1.cs">
+    <Compile Include="ficha1\ex1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ex1.Designer.cs">
-      <DependentUpon>Ex1.cs</DependentUpon>
+    <Compile Include="ficha1\ex1.Designer.cs">
+      <DependentUpon>ex1.cs</DependentUpon>
     </Compile>
-    <Compile Include="ex2.cs">
+    <Compile Include="ficha1\ex2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ex2.Designer.cs">
+    <Compile Include="ficha1\ex2.Designer.cs">
       <DependentUpon>ex2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ficha1\ex3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ficha1\ex3.Designer.cs">
+      <DependentUpon>ex3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ficha1\ex4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ficha1\ex4.Designer.cs">
+      <DependentUpon>ex4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ficha2\ex1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ficha2\ex1.Designer.cs">
+      <DependentUpon>ex1.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -64,16 +82,43 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="menus\ficha1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="menus\ficha1.Designer.cs">
+      <DependentUpon>ficha1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="menus\ficha2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="menus\ficha2.Designer.cs">
+      <DependentUpon>ficha2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Ex1.resx">
-      <DependentUpon>Ex1.cs</DependentUpon>
+    <EmbeddedResource Include="ficha1\ex1.resx">
+      <DependentUpon>ex1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ex2.resx">
+    <EmbeddedResource Include="ficha1\ex2.resx">
       <DependentUpon>ex2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ficha1\ex3.resx">
+      <DependentUpon>ex3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ficha1\ex4.resx">
+      <DependentUpon>ex4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ficha2\ex1.resx">
+      <DependentUpon>ex1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="menus\ficha1.resx">
+      <DependentUpon>ficha1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="menus\ficha2.resx">
+      <DependentUpon>ficha2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

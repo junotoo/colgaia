@@ -8,18 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace _21_Juno_FichaCsharpWF_01
+namespace Fichas.menus
 {
-    public partial class Ex1 : Form
+    public partial class ficha2 : UserControl
     {
-        public Ex1()
+        public ficha2()
         {
             InitializeComponent();
         }
 
-        private void btnQuem_Click(object sender, EventArgs e)
+        private void btnEx1_Click(object sender, EventArgs e)
         {
-            lblNoddy.Visible = true;
+
         }
     }
 }
