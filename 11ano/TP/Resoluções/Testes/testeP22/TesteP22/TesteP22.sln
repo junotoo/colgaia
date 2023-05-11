@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32319.34
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestHotel", "TesteP22\GestHotel.csproj", "{01323CE6-6DAC-45E9-BEC4-C4DC37C0791A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestCartaoPostalWeb", "GestCartaoPostalWeb\GestCartaoPostalWeb.csproj", "{250D76C3-1724-4AE8-8EE5-99A8904145DD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{01323CE6-6DAC-45E9-BEC4-C4DC37C0791A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01323CE6-6DAC-45E9-BEC4-C4DC37C0791A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01323CE6-6DAC-45E9-BEC4-C4DC37C0791A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01323CE6-6DAC-45E9-BEC4-C4DC37C0791A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{250D76C3-1724-4AE8-8EE5-99A8904145DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{250D76C3-1724-4AE8-8EE5-99A8904145DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{250D76C3-1724-4AE8-8EE5-99A8904145DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{250D76C3-1724-4AE8-8EE5-99A8904145DD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EE6F2925-F39A-4813-9755-9E40E63D6A76}
+	EndGlobalSection
+EndGlobal
