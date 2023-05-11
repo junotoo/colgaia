@@ -72,5 +72,11 @@ namespace Fichas
             ficha1_ucf.Visible = true;
             ficha1_ucf.BringToFront();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            ficha31.Visible = true;
+            ficha31.BringToFront();
+        }
     }
 }

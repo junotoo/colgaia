@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Fichas.menus
+namespace Fichas.ficha3
 {
-    public partial class ficha2 : UserControl
+    public partial class ex2 : Form
     {
-        public ficha2()
+        public ex2()
         {
             InitializeComponent();
-        }
-
-        private void btnEx1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

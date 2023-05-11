@@ -70,11 +70,17 @@
     <Compile Include="ficha1\ex4.Designer.cs">
       <DependentUpon>ex4.cs</DependentUpon>
     </Compile>
-    <Compile Include="ficha2\ex1.cs">
+    <Compile Include="ficha3\ex1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ficha2\ex1.Designer.cs">
+    <Compile Include="ficha3\ex1.Designer.cs">
       <DependentUpon>ex1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ficha3\ex2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ficha3\ex2.Designer.cs">
+      <DependentUpon>ex2.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -88,11 +94,11 @@
     <Compile Include="menus\ficha1.Designer.cs">
       <DependentUpon>ficha1.cs</DependentUpon>
     </Compile>
-    <Compile Include="menus\ficha2.cs">
+    <Compile Include="menus\ficha3.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="menus\ficha2.Designer.cs">
-      <DependentUpon>ficha2.cs</DependentUpon>
+    <Compile Include="menus\ficha3.Designer.cs">
+      <DependentUpon>ficha3.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -108,8 +114,11 @@
     <EmbeddedResource Include="ficha1\ex4.resx">
       <DependentUpon>ex4.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ficha2\ex1.resx">
+    <EmbeddedResource Include="ficha3\ex1.resx">
       <DependentUpon>ex1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ficha3\ex2.resx">
+      <DependentUpon>ex2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -117,8 +126,8 @@
     <EmbeddedResource Include="menus\ficha1.resx">
       <DependentUpon>ficha1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="menus\ficha2.resx">
-      <DependentUpon>ficha2.cs</DependentUpon>
+    <EmbeddedResource Include="menus\ficha3.resx">
+      <DependentUpon>ficha3.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
