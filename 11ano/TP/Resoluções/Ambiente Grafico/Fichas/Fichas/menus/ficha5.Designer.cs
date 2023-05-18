@@ -1,6 +1,6 @@
 ﻿namespace Fichas.menus
 {
-    partial class ficha3
+    partial class ficha5
     {
         /// <summary> 
         /// Required designer variable.
@@ -30,6 +30,8 @@
         {
             this.btnEx2 = new System.Windows.Forms.Button();
             this.btnEx1 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnEx2
@@ -39,10 +41,10 @@
             this.btnEx2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEx2.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEx2.ForeColor = System.Drawing.Color.White;
-            this.btnEx2.Location = new System.Drawing.Point(397, 94);
+            this.btnEx2.Location = new System.Drawing.Point(399, 88);
             this.btnEx2.Name = "btnEx2";
-            this.btnEx2.Size = new System.Drawing.Size(282, 224);
-            this.btnEx2.TabIndex = 14;
+            this.btnEx2.Size = new System.Drawing.Size(282, 100);
+            this.btnEx2.TabIndex = 16;
             this.btnEx2.Text = "Exercício 2";
             this.btnEx2.UseVisualStyleBackColor = false;
             this.btnEx2.Click += new System.EventHandler(this.btnEx2_Click);
@@ -54,22 +56,54 @@
             this.btnEx1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEx1.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEx1.ForeColor = System.Drawing.Color.White;
-            this.btnEx1.Location = new System.Drawing.Point(31, 94);
+            this.btnEx1.Location = new System.Drawing.Point(33, 88);
             this.btnEx1.Name = "btnEx1";
-            this.btnEx1.Size = new System.Drawing.Size(282, 224);
-            this.btnEx1.TabIndex = 12;
+            this.btnEx1.Size = new System.Drawing.Size(282, 100);
+            this.btnEx1.TabIndex = 15;
             this.btnEx1.Text = "Exercício 1";
             this.btnEx1.UseVisualStyleBackColor = false;
             this.btnEx1.Click += new System.EventHandler(this.btnEx1_Click);
             // 
-            // ficha3
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(33, 212);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(282, 100);
+            this.button1.TabIndex = 17;
+            this.button1.Text = "Exercício 3";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(399, 212);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(282, 100);
+            this.button2.TabIndex = 18;
+            this.button2.Text = "Exercício 4";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // ficha5
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnEx2);
             this.Controls.Add(this.btnEx1);
-            this.Name = "ficha3";
+            this.Name = "ficha5";
             this.Size = new System.Drawing.Size(715, 400);
             this.ResumeLayout(false);
 
@@ -79,5 +113,7 @@
 
         private System.Windows.Forms.Button btnEx2;
         private System.Windows.Forms.Button btnEx1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }

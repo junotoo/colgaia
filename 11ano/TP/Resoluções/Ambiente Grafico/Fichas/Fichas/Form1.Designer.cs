@@ -36,14 +36,16 @@
             this.button12 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.btnFicha1 = new System.Windows.Forms.Button();
-            this.ficha1_ucf = new Fichas.menus.ficha1();
+            this.ficha61 = new Fichas.menus.ficha6();
+            this.ficha51 = new Fichas.menus.ficha5();
             this.ficha31 = new Fichas.menus.ficha3();
+            this.ficha1_ucf = new Fichas.menus.ficha1();
+            this.ficha101 = new Fichas.menus.ficha10();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -106,7 +108,6 @@
             this.panel2.Controls.Add(this.button12);
             this.panel2.Controls.Add(this.button11);
             this.panel2.Controls.Add(this.button10);
-            this.panel2.Controls.Add(this.button9);
             this.panel2.Controls.Add(this.button8);
             this.panel2.Controls.Add(this.button7);
             this.panel2.Controls.Add(this.button6);
@@ -157,19 +158,6 @@
             this.button10.Text = "X";
             this.button10.UseVisualStyleBackColor = false;
             // 
-            // button9
-            // 
-            this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.button9.FlatAppearance.BorderSize = 0;
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.Location = new System.Drawing.Point(8, 223);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(65, 35);
-            this.button9.TabIndex = 13;
-            this.button9.Text = "X";
-            this.button9.UseVisualStyleBackColor = false;
-            // 
             // button8
             // 
             this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
@@ -178,10 +166,11 @@
             this.button8.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button8.Location = new System.Drawing.Point(8, 182);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(65, 35);
+            this.button8.Size = new System.Drawing.Size(65, 76);
             this.button8.TabIndex = 12;
-            this.button8.Text = "X";
+            this.button8.Text = "Ficha 10";
             this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button7
             // 
@@ -195,6 +184,7 @@
             this.button7.TabIndex = 11;
             this.button7.Text = "Ficha 6";
             this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button6
             // 
@@ -208,6 +198,7 @@
             this.button6.TabIndex = 10;
             this.button6.Text = "Ficha 5";
             this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button5
             // 
@@ -237,15 +228,23 @@
             this.btnFicha1.UseVisualStyleBackColor = false;
             this.btnFicha1.Click += new System.EventHandler(this.btnFicha1_Click);
             // 
-            // ficha1_ucf
+            // ficha61
             // 
-            this.ficha1_ucf.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.ficha1_ucf.ForeColor = System.Drawing.Color.White;
-            this.ficha1_ucf.Location = new System.Drawing.Point(80, 50);
-            this.ficha1_ucf.Name = "ficha1_ucf";
-            this.ficha1_ucf.Size = new System.Drawing.Size(715, 400);
-            this.ficha1_ucf.TabIndex = 6;
-            this.ficha1_ucf.Visible = false;
+            this.ficha61.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.ficha61.Location = new System.Drawing.Point(88, 56);
+            this.ficha61.Name = "ficha61";
+            this.ficha61.Size = new System.Drawing.Size(715, 400);
+            this.ficha61.TabIndex = 17;
+            this.ficha61.Visible = false;
+            // 
+            // ficha51
+            // 
+            this.ficha51.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.ficha51.Location = new System.Drawing.Point(88, 56);
+            this.ficha51.Name = "ficha51";
+            this.ficha51.Size = new System.Drawing.Size(715, 400);
+            this.ficha51.TabIndex = 18;
+            this.ficha51.Visible = false;
             // 
             // ficha31
             // 
@@ -256,12 +255,34 @@
             this.ficha31.TabIndex = 17;
             this.ficha31.Visible = false;
             // 
+            // ficha1_ucf
+            // 
+            this.ficha1_ucf.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.ficha1_ucf.ForeColor = System.Drawing.Color.White;
+            this.ficha1_ucf.Location = new System.Drawing.Point(80, 50);
+            this.ficha1_ucf.Name = "ficha1_ucf";
+            this.ficha1_ucf.Size = new System.Drawing.Size(715, 400);
+            this.ficha1_ucf.TabIndex = 6;
+            this.ficha1_ucf.Visible = false;
+            // 
+            // ficha101
+            // 
+            this.ficha101.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.ficha101.Location = new System.Drawing.Point(88, 56);
+            this.ficha101.Name = "ficha101";
+            this.ficha101.Size = new System.Drawing.Size(715, 400);
+            this.ficha101.TabIndex = 17;
+            this.ficha101.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.ficha101);
+            this.Controls.Add(this.ficha61);
+            this.Controls.Add(this.ficha51);
             this.Controls.Add(this.ficha31);
             this.Controls.Add(this.ficha1_ucf);
             this.Controls.Add(this.panel2);
@@ -285,7 +306,6 @@
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button6;
@@ -293,6 +313,9 @@
         private System.Windows.Forms.Button btnFicha1;
         private menus.ficha1 ficha1_ucf;
         private menus.ficha3 ficha31;
+        private menus.ficha5 ficha51;
+        private menus.ficha6 ficha61;
+        private menus.ficha10 ficha101;
     }
 }
 

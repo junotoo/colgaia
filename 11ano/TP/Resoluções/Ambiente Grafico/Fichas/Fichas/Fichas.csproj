@@ -46,6 +46,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ficha10\ex1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ficha10\ex1.Designer.cs">
+      <DependentUpon>ex1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ficha10\ex2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ficha10\ex2.Designer.cs">
+      <DependentUpon>ex2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ficha10\ex3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ficha10\ex3.Designer.cs">
+      <DependentUpon>ex3.cs</DependentUpon>
+    </Compile>
     <Compile Include="ficha1\ex1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,6 +100,42 @@
     <Compile Include="ficha3\ex2.Designer.cs">
       <DependentUpon>ex2.cs</DependentUpon>
     </Compile>
+    <Compile Include="ficha5\ex1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ficha5\ex1.Designer.cs">
+      <DependentUpon>ex1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ficha5\ex2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ficha5\ex2.Designer.cs">
+      <DependentUpon>ex2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ficha5\ex3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ficha5\ex3.Designer.cs">
+      <DependentUpon>ex3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ficha5\ex4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ficha5\ex4.Designer.cs">
+      <DependentUpon>ex4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ficha6\ex1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ficha6\ex1.Designer.cs">
+      <DependentUpon>ex1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ficha6\ex2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ficha6\ex2.Designer.cs">
+      <DependentUpon>ex2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,14 +148,41 @@
     <Compile Include="menus\ficha1.Designer.cs">
       <DependentUpon>ficha1.cs</DependentUpon>
     </Compile>
+    <Compile Include="menus\ficha10.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="menus\ficha10.Designer.cs">
+      <DependentUpon>ficha10.cs</DependentUpon>
+    </Compile>
     <Compile Include="menus\ficha3.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="menus\ficha3.Designer.cs">
       <DependentUpon>ficha3.cs</DependentUpon>
     </Compile>
+    <Compile Include="menus\ficha5.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="menus\ficha5.Designer.cs">
+      <DependentUpon>ficha5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="menus\ficha6.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="menus\ficha6.Designer.cs">
+      <DependentUpon>ficha6.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ficha10\ex1.resx">
+      <DependentUpon>ex1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ficha10\ex2.resx">
+      <DependentUpon>ex2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ficha10\ex3.resx">
+      <DependentUpon>ex3.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ficha1\ex1.resx">
       <DependentUpon>ex1.cs</DependentUpon>
     </EmbeddedResource>
@@ -120,14 +201,41 @@
     <EmbeddedResource Include="ficha3\ex2.resx">
       <DependentUpon>ex2.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ficha5\ex1.resx">
+      <DependentUpon>ex1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ficha5\ex2.resx">
+      <DependentUpon>ex2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ficha5\ex3.resx">
+      <DependentUpon>ex3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ficha5\ex4.resx">
+      <DependentUpon>ex4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ficha6\ex1.resx">
+      <DependentUpon>ex1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ficha6\ex2.resx">
+      <DependentUpon>ex2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="menus\ficha1.resx">
       <DependentUpon>ficha1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="menus\ficha10.resx">
+      <DependentUpon>ficha10.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="menus\ficha3.resx">
       <DependentUpon>ficha3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="menus\ficha5.resx">
+      <DependentUpon>ficha5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="menus\ficha6.resx">
+      <DependentUpon>ficha6.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -137,6 +245,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -150,6 +259,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MicrosoftTeams-image.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -10,22 +10,22 @@ using System.Windows.Forms;
 
 namespace Fichas.menus
 {
-    public partial class ficha3 : UserControl
+    public partial class ficha6 : UserControl
     {
-        public ficha3()
+        public ficha6()
         {
             InitializeComponent();
         }
 
         private void btnEx1_Click(object sender, EventArgs e)
         {
-            ficha2.ex1 f = new ficha2.ex1();
+            Fichas.ficha6.ex1 f = new Fichas.ficha6.ex1();
             f.Show();
         }
 
         private void btnEx2_Click(object sender, EventArgs e)
         {
-            Fichas.ficha3.ex2 f = new Fichas.ficha3.ex2();
+            Fichas.ficha6.ex2 f = new Fichas.ficha6.ex2();
             f.Show();
         }
     }
