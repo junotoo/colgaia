@@ -49,6 +49,7 @@
             this.button2.TabIndex = 22;
             this.button2.Text = "Exercício 4";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -108,6 +109,7 @@
             this.button3.TabIndex = 24;
             this.button3.Text = "Exercício 6";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -122,6 +124,7 @@
             this.button4.TabIndex = 23;
             this.button4.Text = "Exercício 5";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // ficha10
             // 

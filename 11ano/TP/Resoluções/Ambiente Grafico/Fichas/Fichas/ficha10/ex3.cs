@@ -46,8 +46,6 @@ namespace Fichas.ficha10
                 }
             }
             lblSelect.Text = res;
-
-            // Use 'res' variable as needed
         }
 
     }

@@ -34,5 +34,23 @@ namespace Fichas.menus
             Fichas.ficha10.ex3 f = new Fichas.ficha10.ex3();
             f.Show();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Fichas.ficha10.ex4 f = new Fichas.ficha10.ex4();
+            f.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Fichas.ficha10.ex6 f = new Fichas.ficha10.ex6();
+            f.Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Fichas.ficha10.ex5 f = new Fichas.ficha10.ex5();
+            f.Show();
+        }
     }
 }

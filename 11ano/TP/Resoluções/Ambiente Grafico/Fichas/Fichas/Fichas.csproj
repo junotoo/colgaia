@@ -64,6 +64,30 @@
     <Compile Include="ficha10\ex3.Designer.cs">
       <DependentUpon>ex3.cs</DependentUpon>
     </Compile>
+    <Compile Include="ficha10\ex4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ficha10\ex4.Designer.cs">
+      <DependentUpon>ex4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ficha10\ex5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ficha10\ex5.Designer.cs">
+      <DependentUpon>ex5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ficha10\ex6.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ficha10\ex6.Designer.cs">
+      <DependentUpon>ex6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ficha11.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ficha11.Designer.cs">
+      <DependentUpon>ficha11.cs</DependentUpon>
+    </Compile>
     <Compile Include="ficha1\ex1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -182,6 +206,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ficha10\ex3.resx">
       <DependentUpon>ex3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ficha10\ex4.resx">
+      <DependentUpon>ex4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ficha10\ex5.resx">
+      <DependentUpon>ex5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ficha10\ex6.resx">
+      <DependentUpon>ex6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ficha11.resx">
+      <DependentUpon>ficha11.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ficha1\ex1.resx">
       <DependentUpon>ex1.cs</DependentUpon>
